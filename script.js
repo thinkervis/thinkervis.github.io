@@ -12,12 +12,13 @@ function escapeHtml(s){return s.replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>'
 function highlightCode(raw){
   let s=escapeHtml(raw);
   const placeholders=[];
-  s=s.replace(/(&quot;[^\n]*?&quot;|'[^\n]*?')/g,m=>{const id=`@@S${placeholders.length}@@`;placeholders.push(`<span class="tok-str">${m}</span>`);return id});
-  s=s.replace(/(#.*)$/gm,'<span class="tok-comment">$1</span>');
+  const hold=(html)=>{const id=`@@H${placeholders.length}@@`;placeholders.push(html);return id};
+  s=s.replace(/(&quot;[^\n]*?&quot;|'[^\n]*?')/g,m=>hold(`<span class="tok-str">${m}</span>`));
+  s=s.replace(/(#.*)$/gm,m=>hold(`<span class="tok-comment">${m}</span>`));
   s=s.replace(/\b(from|import|as|def|return|if|elif|else|for|while|try|except|finally|with|in|and|or|not|True|False|None|class|break|continue)\b/g,'<span class="tok-key">$1</span>');
   s=s.replace(/\b(\d+(?:\.\d+)?)\b/g,'<span class="tok-num">$1</span>');
   s=s.replace(/\b(print|sleep|Pin|NeoPixel|read_csv|dataframe|metric|line_chart|bar_chart|groupby|set_index|mean|sum|len|range)\b/g,'<span class="tok-fn">$1</span>');
-  placeholders.forEach((v,i)=>{s=s.replace(`@@S${i}@@`,v)});
+  placeholders.forEach((v,i)=>{s=s.replace(`@@H${i}@@`,v)});
   return s;
 }
 function enhanceCodeBlocks(root=document){

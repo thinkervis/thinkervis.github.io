@@ -1,172 +1,27 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="피코·코딩·데이터·AI·클라우드 프로젝트형 웹 교재" />
-  <title>Thinkervis Pico Lab | 피코·데이터·AI 프로젝트 교재</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Thinkervis Pico Lab | 웹 교재</title>
+<meta name="description" content="피코·코딩·데이터·AI·클라우드 프로젝트형 웹 교재"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <div class="noise"></div>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Thinkervis Pico Lab home">
-      <span class="brand-mark">🧚</span>
-      <span><strong>Thinkervis Pico Lab</strong><small>피코로 감지하고, 데이터로 말하고, AI로 확장하기</small></span>
-    </a>
-    <nav>
-      <a href="#journey">학습 여정</a>
-      <a href="#modules">차시 설계</a>
-      <a href="#visuals">비주얼</a>
-      <a href="#addons">애드온</a>
-      <a href="#kits">키트</a>
-    </nav>
-  </header>
-
-  <main id="top">
-    <section class="hero section-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Pico · Coding · Data · AI Literacy · Cloud</p>
-        <h1>첫 10분엔 색이 바뀌고,<br />마지막엔 진짜 서비스처럼 공유됩니다.</h1>
-        <p class="hero-text">왕초보도 손코딩으로 바로 반응하는 작품을 만들고, 센서값을 데이터로 쌓아, AI 리터러시 이후 바이브코딩·Streamlit·GitHub·API까지 자연스럽게 확장하는 프로젝트형 웹 교재입니다.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#modules">교재 흐름 보기</a>
-          <a class="button ghost" href="#visuals">시각 설계 보기</a>
-        </div>
-        <div class="trust-row">
-          <span>초반 AI 금지</span><span>직접 그래프 경험</span><span>웹 GitHub 중심</span><span>Streamlit Cloud 배포</span>
-        </div>
-      </div>
-      <div class="hero-device" aria-label="교실 환경 대시보드 미리보기">
-        <div class="device-glow"></div>
-        <div class="dashboard-card">
-          <div class="dash-top"><span></span><span></span><span></span></div>
-          <div class="dash-title">
-            <div><small>Live Classroom</small><strong>우리 반 쾌적도</strong></div>
-            <b class="status">좋음</b>
-          </div>
-          <div class="metric-grid">
-            <article><small>온도</small><strong>24.8℃</strong><em>쾌적</em></article>
-            <article><small>조도</small><strong>612</strong><em>충분</em></article>
-            <article><small>소음</small><strong>42dB</strong><em>보통</em></article>
-          </div>
-          <svg class="chart" viewBox="0 0 560 180" role="img" aria-label="시간별 센서 그래프">
-            <defs>
-              <linearGradient id="lineFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#7c3aed" stop-opacity=".42"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></linearGradient>
-            </defs>
-            <path class="grid-line" d="M10 35H550M10 85H550M10 135H550" />
-            <path class="area" d="M10 130 C80 94, 110 108, 160 80 S260 42, 320 66 S420 144, 550 54 L550 170 L10 170 Z" />
-            <path class="line" d="M10 130 C80 94, 110 108, 160 80 S260 42, 320 66 S420 144, 550 54" />
-            <circle cx="160" cy="80" r="7"/><circle cx="320" cy="66" r="7"/><circle cx="550" cy="54" r="7"/>
-          </svg>
-          <div class="idea-pill">환기 추천: 20분 뒤 다시 확인해요</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="journey" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Learning Journey</p>
-        <h2>도구를 나누지 않고, 하나의 프로젝트가 자라게 합니다.</h2>
-        <p>피코·코딩·데이터·AI·클라우드는 따로 배우는 단원이 아니라, 학생의 질문이 깊어질수록 필요한 도구로 자연스럽게 등장합니다.</p>
-      </div>
-      <div class="journey-map">
-        <div class="journey-step hot"><b>1</b><strong>바로 반응</strong><span>무드등 · 버튼 · 소음 신호등</span></div>
-        <div class="connector"></div>
-        <div class="journey-step"><b>2</b><strong>손코딩 이해</strong><span>입력·조건·반복·출력</span></div>
-        <div class="connector"></div>
-        <div class="journey-step"><b>3</b><strong>데이터 발견</strong><span>CSV · 그래프 · 이상치</span></div>
-        <div class="connector"></div>
-        <div class="journey-step cool"><b>4</b><strong>AI 리터러시</strong><span>환각 · 프롬프트 · 검증</span></div>
-        <div class="connector"></div>
-        <div class="journey-step"><b>5</b><strong>바이브코딩</strong><span>대시보드 · 디버깅 · UI</span></div>
-        <div class="connector"></div>
-        <div class="journey-step green"><b>6</b><strong>공유 프로젝트</strong><span>Sheets · Streamlit · GitHub · API</span></div>
-      </div>
-    </section>
-
-    <section id="modules" class="section split">
-      <div class="sticky-note">
-        <p class="eyebrow">Curriculum UX</p>
-        <h2>36차시를 권장하지만, 30차시로 압축 가능한 모듈형 구조</h2>
-        <p>초반 성공 경험과 AI 리터러시는 절대 생략하지 않습니다. 애드온은 프로젝트의 완성도를 높이는 확장 모듈로 붙입니다.</p>
-      </div>
-      <div class="module-list">
-        <article class="module-card accent-1"><span>01–06</span><h3>재미있는 손코딩</h3><p>첫 화면부터 결과물이 보입니다. 색·버튼·소리·게임으로 “된다!”를 만듭니다.</p></article>
-        <article class="module-card accent-2"><span>07–13</span><h3>센서값이 데이터가 되기</h3><p>CSV, 공통 열 이름, 그래프, 이상치를 학생 프로젝트 맥락 안에서 배웁니다.</p></article>
-        <article class="module-card accent-3"><span>14–17</span><h3>AI 리터러시</h3><p>AI를 쓰기 전에 먼저 의심하고 읽고 검증하는 법을 배웁니다.</p></article>
-        <article class="module-card accent-4"><span>18–23</span><h3>바이브코딩과 대시보드</h3><p>직접 만든 그래프를 AI와 개선하고, Streamlit 대시보드로 표현합니다.</p></article>
-        <article class="module-card accent-5"><span>24–28</span><h3>클라우드 애드온</h3><p>Google Sheets, 여러 피코 데이터, 웹 GitHub, Streamlit Cloud, API를 연결합니다.</p></article>
-        <article class="module-card accent-6"><span>29–36</span><h3>메이커 페어 프로젝트</h3><p>장치·데이터·대시보드·기록·발표가 하나로 연결된 최종 전시를 만듭니다.</p></article>
-      </div>
-    </section>
-
-    <section id="visuals" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Visual Excellence</p>
-        <h2>이미지와 다이어그램은 ‘장식’이 아니라 이해를 돕는 인터페이스여야 합니다.</h2>
-      </div>
-      <div class="visual-grid">
-        <article class="visual-card classroom">
-          <h3>교실 데이터 지도</h3>
-          <div class="room-map">
-            <span class="window">창가</span><i class="seat s1">612</i><i class="seat s2">508</i><i class="seat s3 hot">731</i><i class="seat s4">455</i><i class="seat s5 cool">388</i><i class="seat s6">529</i><b>교탁</b>
-          </div>
-          <p>자리별 센서값을 색과 위치로 보여주어 “왜 데이터를 합쳐야 하는지” 직관적으로 이해시킵니다.</p>
-        </article>
-        <article class="visual-card flow">
-          <h3>데이터 흐름 다이어그램</h3>
-          <div class="data-flow">
-            <span>피코</span><em></em><span>CSV</span><em></em><span>Sheets</span><em></em><span>Streamlit</span><em></em><span>발표</span>
-          </div>
-          <p>학생이 지금 배우는 도구가 전체 프로젝트의 어디에 위치하는지 계속 볼 수 있게 합니다.</p>
-        </article>
-        <article class="visual-card prompt">
-          <h3>AI 검증 카드</h3>
-          <ul class="check-list">
-            <li>AI가 만든 코드를 읽었나요?</li>
-            <li>모르는 줄에 표시했나요?</li>
-            <li>우리 데이터 열 이름과 맞나요?</li>
-            <li>실행 결과를 검증했나요?</li>
-          </ul>
-          <p>AI 사용을 금지하지 않고, 책임 있게 쓰는 루틴을 시각화합니다.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="addons" class="section dark-panel">
-      <div>
-        <p class="eyebrow">Add-ons</p>
-        <h2>왕초보도 가능한 확장: 클릭, 템플릿, 공유 링크 중심</h2>
-      </div>
-      <div class="addon-grid">
-        <article><strong>Google Sheets</strong><p>CSV를 클라우드 데이터 공책으로 올리고 팀별 데이터를 합칩니다.</p></article>
-        <article><strong>Streamlit Cloud</strong><p>파이썬 그래프를 링크로 공유되는 웹 대시보드로 바꿉니다.</p></article>
-        <article><strong>웹 GitHub</strong><p>CLI 없이 README, data.csv, 사진, AI 활용 기록을 정리합니다.</p></article>
-        <article><strong>API</strong><p>날씨·미세먼지 같은 외부 데이터와 교실 센서값을 비교합니다.</p></article>
-      </div>
-    </section>
-
-    <section id="kits" class="section kits">
-      <div class="section-heading">
-        <p class="eyebrow">Class Kits</p>
-        <h2>키트는 부품 목록이 아니라 수업 경험을 설계합니다.</h2>
-      </div>
-      <div class="kit-grid">
-        <article class="kit-card"><span>심플</span><h3>바로 반응 입문</h3><p>Pico 2 W, Grove Shield, Button, Light Sensor, RGB LED/NeoPixel, Buzzer</p><b>4–8차시 · 첫 성공 경험</b></article>
-        <article class="kit-card featured"><span>기본 추천</span><h3>정규 수업 표준형</h3><p>온습도, 조도, 소리, 토양수분, OLED, NeoPixel까지 포함해 데이터와 작품성을 모두 잡습니다.</p><b>15–36차시 · 가장 추천</b></article>
-        <article class="kit-card"><span>심화</span><h3>전시·IoT 확장</h3><p>공기질, CO₂, LED Matrix, Servo, microSD, 배터리, 라즈베리파이 서버 연동</p><b>동아리 · 메이커 페어</b></article>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <strong>Thinkervis Pico Lab</strong>
-    <span>학생이 피코로 세상을 감지하고, 데이터로 의미를 발견하고, AI와 클라우드로 프로젝트를 확장하는 교재.</span>
-  </footer>
-  <script src="script.js"></script>
-</body>
-</html>
+<div class="noise"></div>
+<header class="site-header"><a class="brand" href="#top"><span class="brand-mark">🧚</span><span><strong>Thinkervis Pico Lab</strong><small>재미있는 손코딩에서 AI·클라우드 프로젝트까지</small></span></a><nav><a href="#start">수업 시작</a><a href="#lessons">36차시</a><a href="#practice">실습</a><a href="#resources">자료실</a><a href="#kits">키트</a></nav><a class="mobile-start" href="#start">시작</a></header>
+<main id="top">
+<section class="hero section-grid"><div class="hero-copy"><p class="eyebrow">WEB TEXTBOOK · PICO · DATA · AI</p><h1>처음엔 색이 바뀌고,<br/>끝에는 진짜 서비스처럼 공유됩니다.</h1><p class="hero-text">학생은 피코로 세상을 감지하고, 손코딩으로 원리를 붙잡고, 데이터로 의미를 발견한 뒤, AI 리터러시 이후 바이브코딩·Streamlit·GitHub·API로 프로젝트를 확장합니다.</p><div class="hero-actions"><a class="button primary" href="#lesson-1">1차시 바로 열기</a><a class="button ghost" href="#resources">템플릿 받기</a></div><div class="trust-row"><span>초반 AI 금지</span><span>직접 그래프 경험</span><span>웹 GitHub 중심</span><span>Streamlit Cloud 배포</span></div></div></section>
+<section id="start" class="quick-start section"><article class="quick-card primary-card"><span>학생용</span><h2>1차시부터 바로 시작</h2><p>피코 LED 색 바꾸기부터 시작합니다. 긴 설명보다 먼저 “된다!”를 경험합니다.</p><a class="button primary" href="#lesson-1">첫 차시 열기</a></article><article class="quick-card"><span>교사용</span><h2>36차시 흐름 확인</h2><p>손코딩→데이터→AI 리터러시→대시보드→클라우드→메이커 페어 흐름입니다.</p><a class="button ghost" href="#lessons">차시 보기</a></article><article class="quick-card"><span>프로젝트</span><h2>최종 결과물 미리보기</h2><p>피코 장치, 데이터셋, Streamlit 대시보드, GitHub 기록, 발표가 하나로 연결됩니다.</p><a class="button ghost" href="#project-flow">흐름 보기</a></article></section>
+<section id="journey" class="section"><div class="section-heading"><p class="eyebrow">Learning Journey</p><h2>도구를 나누지 않고, 하나의 프로젝트가 자랍니다.</h2><p>차시가 진행될수록 학생의 질문이 깊어지고, 그때 필요한 도구가 자연스럽게 등장합니다.</p></div><div class="journey-map"><a class="journey-step" href="#module-1"><b>1</b><strong>바로 반응</strong><span>무드등·버튼·게임</span></a><a class="journey-step" href="#module-2"><b>2</b><strong>데이터 발견</strong><span>CSV·그래프·이상치</span></a><a class="journey-step" href="#module-3"><b>3</b><strong>AI 리터러시</strong><span>환각·프롬프트·윤리</span></a><a class="journey-step" href="#module-4"><b>4</b><strong>바이브코딩</strong><span>그래프·디버깅·대시보드</span></a><a class="journey-step" href="#module-5"><b>5</b><strong>클라우드</strong><span>Sheets·GitHub·API</span></a><a class="journey-step" href="#module-6"><b>6</b><strong>메이커 페어</strong><span>전시·발표·성찰</span></a></div></section>
+<section id="lessons" class="section"><div class="section-heading"><p class="eyebrow">36 Lessons</p><h2>차시별로 바로 들어가는 웹 교재</h2><p>각 차시는 미션, 오늘 만들 것, 핵심 개념, 활동 단계, 생각 질문, 산출물로 구성됩니다.</p></div><div class="lesson-toolbar"><button data-filter="all" class="active">전체</button><button data-filter="재미있는 손코딩">손코딩</button><button data-filter="데이터 탐구">데이터</button><button data-filter="AI 리터러시">AI 리터러시</button><button data-filter="바이브코딩·대시보드">대시보드</button><button data-filter="클라우드 애드온">클라우드</button><button data-filter="메이커 페어 프로젝트">프로젝트</button></div><div class="lesson-grid" id="lessonGrid"></div></section>
+<section id="practice" class="section split"><div class="sticky-note"><p class="eyebrow">Practice Layout</p><h2>실습 페이지는 따라하기 쉬워야 합니다.</h2><p>학생용 교재는 목표→연결→코드→바꿔보기→친구와 공유→저장 순서로 갑니다.</p></div><article class="practice-preview"><div class="lesson-meta"><span>01차시</span><span>40분</span><span>입문</span></div><h3>피코 LED 색 바꾸기</h3><ol class="big-steps"><li><b>오늘 만들 것 보기</b><p>완성 예시 이미지/GIF를 먼저 봅니다.</p></li><li><b>연결하기</b><p>사진을 보고 Pico와 LED를 연결합니다.</p></li><li><b>코드 실행</b><p>전체 코드를 제공하되 바꿀 부분을 강조합니다.</p></li><li><b>색 바꿔보기</b><p>RGB 숫자를 수정해 우리 팀 컬러를 만듭니다.</p></li><li><b>공유하기</b><p>친구에게 색의 의미와 바꾼 코드를 설명합니다.</p></li></ol></article></section>
+<section id="project-flow" class="section dark-panel"><p class="eyebrow">Project Flow</p><h2>피코 데이터가 웹 서비스가 되는 흐름</h2><div class="flow-diagram"><span>피코 센서</span><em>→</em><span>CSV 저장</span><em>→</em><span>Google Sheets</span><em>→</em><span>Streamlit</span><em>→</em><span>GitHub 기록</span><em>→</em><span>메이커 페어</span></div></section>
+<section id="visuals" class="section"><div class="section-heading"><p class="eyebrow">Visual Aids</p><h2>이미지는 장식이 아니라 이해를 돕는 인터페이스입니다.</h2></div><div class="visual-grid"><article class="visual-card classroom"><h3>교실 데이터 지도</h3><div class="room-map"><span class="window">창가</span><i class="seat s1">612</i><i class="seat s2">508</i><i class="seat s3 hot">731</i><i class="seat s4">455</i><i class="seat s5 cool">388</i><i class="seat s6">529</i><b>교탁</b></div><p>자리별 센서값을 색과 위치로 보여줘 공동 데이터셋의 필요를 직관적으로 이해합니다.</p></article><article class="visual-card"><h3>AI 검증 루틴</h3><ul class="check-list"><li>AI가 만든 코드를 읽었나요?</li><li>모르는 줄에 표시했나요?</li><li>우리 데이터 열 이름과 맞나요?</li><li>실행 결과를 검증했나요?</li></ul></article><article class="visual-card"><h3>최종 산출물</h3><div class="output-stack"><span>작동 장치</span><span>CSV/Sheets</span><span>Streamlit 링크</span><span>GitHub README</span><span>AI 활용 기록</span></div></article></div></section>
+<section id="resources" class="section"><div class="section-heading"><p class="eyebrow">Starter Templates</p><h2>웹 GitHub와 Streamlit Cloud용 자료실</h2><p>CLI 없이 복사·붙여넣기와 웹 업로드로 시작할 수 있는 파일 템플릿입니다.</p></div><div class="resource-grid" id="resourceGrid"></div></section>
+<section id="kits" class="section kits"><div class="section-heading"><p class="eyebrow">Class Kits</p><h2>키트는 부품 목록이 아니라 수업 경험을 설계합니다.</h2></div><div class="kit-grid"><article class="kit-card"><span>심플</span><h3>바로 반응 입문</h3><p>Pico 2 W, Grove Shield, Button, Light Sensor, RGB LED/NeoPixel, Buzzer</p><b>4–8차시 · 첫 성공 경험</b></article><article class="kit-card featured"><span>기본 추천</span><h3>정규 수업 표준형</h3><p>온습도, 조도, 소리, 토양수분, OLED, NeoPixel까지 포함해 데이터와 작품성을 모두 잡습니다.</p><b>15–36차시 · 가장 추천</b></article><article class="kit-card"><span>심화</span><h3>전시·IoT 확장</h3><p>공기질, CO₂, LED Matrix, Servo, microSD, 배터리, 라즈베리파이 서버 연동</p><b>동아리 · 메이커 페어</b></article></div></section>
+</main><footer><strong>Thinkervis Pico Lab</strong><span>학생이 피코로 세상을 감지하고, 데이터로 의미를 발견하고, AI와 클라우드로 프로젝트를 확장하는 교재.</span></footer>
+<div class="modal" id="lessonModal" aria-hidden="true"><div class="modal-panel"><button class="modal-close" aria-label="닫기">×</button><div id="modalContent"></div></div></div>
+<script>window.LESSONS=[{"n": 1, "title": "내 책상 무드등", "phase": "재미있는 손코딩", "mission": "코드를 조금 바꿔 우리 팀 컬러 무드등을 만든다.", "making": "RGB LED/NeoPixel 무드등", "concepts": "출력 · RGB · 코드 수정", "question": "색을 숫자로 표현할 수 있다면 감정이나 상태도 숫자로 표현할 수 있을까?", "output": "팀 무드등, 컬러 의미 설명", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 2, "title": "버튼 감정등", "phase": "재미있는 손코딩", "mission": "버튼 입력에 따라 색이 바뀌는 감정등을 만든다.", "making": "버튼 감정등", "concepts": "입력 · 출력 · 조건문 · 상태", "question": "버튼은 컴퓨터에게 어떤 정보를 보내는 걸까?", "output": "감정등, 규칙표", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 3, "title": "빛 반응 책상등", "phase": "재미있는 손코딩", "mission": "조도 센서값에 따라 LED 색이 바뀌는 책상등을 만든다.", "making": "빛 반응 책상등", "concepts": "센서 · 변수 · 기준값 · 조건문", "question": "우리 팀이 정한 밝다의 기준은 모든 자리에서 맞을까?", "output": "밝기 기준값, 책상등", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 4, "title": "교실 소음 신호등", "phase": "재미있는 손코딩", "mission": "소리 크기에 따라 초록·노랑·빨강으로 바뀌는 신호등을 만든다.", "making": "소음 신호등", "concepts": "센서값 흔들림 · 기준값 · 규칙", "question": "한 번 빨간색이 나왔다고 항상 시끄럽다고 말할 수 있을까?", "output": "소음 신호등, 기준표", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 5, "title": "반응속도 미니게임", "phase": "재미있는 손코딩", "mission": "LED가 켜지면 버튼을 누르는 게임을 만들고 기록을 비교한다.", "making": "반응속도 게임", "concepts": "시간 측정 · 변수 · 기록 · 평균", "question": "한 번 측정한 반응속도는 정확할까?", "output": "게임, 기록표", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 6, "title": "내 장치 설명하기", "phase": "재미있는 손코딩", "mission": "내가 만든 장치를 입력-처리-출력 구조로 설명한다.", "making": "장치 설명 카드", "concepts": "입력 · 처리 · 출력 · 코드 읽기", "question": "작동은 되지만 설명 못 하는 코드는 이해한 코드일까?", "output": "설명 카드, 핵심 코드 주석", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 7, "title": "한 순간의 값과 쌓인 데이터", "phase": "데이터 탐구", "mission": "센서값을 여러 번 측정해 데이터 질문을 만든다.", "making": "반복 측정 표", "concepts": "반복 측정 · 시간 · 조건", "question": "한 번 측정한 값으로 결론을 내려도 괜찮을까?", "output": "데이터 표, 탐구 질문", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 8, "title": "CSV와 좋은 데이터 표", "phase": "데이터 탐구", "mission": "센서 데이터를 분석하기 좋은 표 구조로 정리한다.", "making": "CSV형 데이터 표", "concepts": "CSV · 열 이름 · 단위", "question": "열 이름이 제각각이면 여러 팀 데이터를 합칠 수 있을까?", "output": "공통 열 체크리스트", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 9, "title": "우리 반 데이터 산책", "phase": "데이터 탐구", "mission": "팀별로 다른 위치를 측정해 공동 데이터셋을 만든다.", "making": "교실 장소별 데이터", "concepts": "협력 수집 · 장소 차이", "question": "여러 팀이 나눠 측정하면 무엇이 좋아질까?", "output": "장소별 측정 데이터", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 10, "title": "처음 그래프 그리기", "phase": "데이터 탐구", "mission": "AI 없이 직접 그래프를 만들어 패턴을 찾는다.", "making": "기본 그래프", "concepts": "그래프 · 축 · 해석", "question": "숫자 표와 그래프는 무엇이 다르게 보일까?", "output": "그래프, 해석문", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 11, "title": "이상한 데이터 찾기", "phase": "데이터 탐구", "mission": "이상치, 결측치, 측정 오류를 찾아본다.", "making": "품질 점검표", "concepts": "이상치 · 결측치 · 오차", "question": "이상한 값은 무조건 지워야 할까?", "output": "데이터 품질 점검표", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 12, "title": "데이터로 규칙 만들기", "phase": "데이터 탐구", "mission": "센서값으로 쾌적·주의·나쁨 기준을 만든다.", "making": "상태 분류 기준표", "concepts": "분류 · 기준값 · 한계", "question": "좋은 기준은 항상 같아야 할까?", "output": "분류 기준표, 상태 문구", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 13, "title": "중간 미니 발표", "phase": "데이터 탐구", "mission": "데이터를 근거로 우리 팀 질문과 한계를 발표한다.", "making": "데이터 발표 자료", "concepts": "근거 · 한계 · 피드백", "question": "데이터가 있으면 바로 결론을 내려도 될까?", "output": "미니 발표, 피드백", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 14, "title": "AI는 어떻게 틀릴까", "phase": "AI 리터러시", "mission": "AI 설명을 그대로 믿지 않고 코드와 결과로 확인한다.", "making": "AI 오류 찾기", "concepts": "AI 환각 · 검증", "question": "AI가 자신 있게 틀리면 어떻게 확인할까?", "output": "오류 찾기 활동지", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 15, "title": "좋은 프롬프트 만들기", "phase": "AI 리터러시", "mission": "요구사항이 분명한 프롬프트를 작성한다.", "making": "분석용 프롬프트", "concepts": "프롬프트 · 데이터 구조", "question": "좋은 답을 받으려면 내가 먼저 알아야 할 것은?", "output": "프롬프트 개선본", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 16, "title": "AI 코드 읽기 훈련", "phase": "AI 리터러시", "mission": "AI 코드를 실행하기 전에 읽고 예상한다.", "making": "주석 달린 AI 코드", "concepts": "코드 읽기 · 예상 · 검증", "question": "설명 못 하는 AI 코드를 제출해도 될까?", "output": "코드 주석 기록", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 17, "title": "AI 활용 윤리와 기록", "phase": "AI 리터러시", "mission": "AI 사용을 숨기지 않고 책임 있게 기록한다.", "making": "AI 활용 기록지", "concepts": "윤리 · 개인정보 · 책임", "question": "AI 사용을 숨기면 어떤 문제가 생길까?", "output": "AI 활용 기록지", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 18, "title": "AI와 그래프 개선", "phase": "바이브코딩·대시보드", "mission": "직접 만든 그래프를 AI와 함께 개선한다.", "making": "개선된 그래프", "concepts": "시각화 · 비교 · 수정", "question": "보기 좋은 그래프와 정확한 그래프는 어떻게 다를까?", "output": "개선 전후 그래프", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 19, "title": "AI와 디버깅", "phase": "바이브코딩·대시보드", "mission": "오류 메시지를 AI와 함께 읽고 원인을 좁힌다.", "making": "디버깅 기록", "concepts": "오류 · 체크리스트", "question": "AI에게 바로 답 대신 체크리스트를 받으면 좋은 점은?", "output": "디버깅 기록지", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 20, "title": "대시보드란 무엇인가", "phase": "바이브코딩·대시보드", "mission": "사용자가 보고 싶은 정보를 화면으로 설계한다.", "making": "대시보드 스케치", "concepts": "지표 · 사용자 · 스토리", "question": "보고서와 대시보드는 무엇이 다를까?", "output": "화면 스케치", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 21, "title": "Streamlit 첫 대시보드", "phase": "바이브코딩·대시보드", "mission": "템플릿을 수정해 우리 데이터 대시보드를 만든다.", "making": "Streamlit 앱", "concepts": "템플릿 · 표 · 차트", "question": "여기만 바꾸면 내 앱이 되는 지점은 어디일까?", "output": "첫 대시보드", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 22, "title": "상태 메시지 만들기", "phase": "바이브코딩·대시보드", "mission": "데이터 분석 결과를 친절한 문장으로 바꾼다.", "making": "상태 메시지 카드", "concepts": "조건 · 추천 · UX", "question": "데이터를 문장으로 바꿀 때 조심할 점은?", "output": "추천 문구", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 23, "title": "대시보드 중간 공유", "phase": "바이브코딩·대시보드", "mission": "친구가 이해할 수 있는지 사용성 피드백을 받는다.", "making": "공유 가능한 초안", "concepts": "피드백 · 개선", "question": "내 대시보드는 처음 보는 사람도 이해할까?", "output": "피드백 기록", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 24, "title": "Google Sheets 데이터 공책", "phase": "클라우드 애드온", "mission": "CSV를 클라우드 표에 올리고 팀과 공유한다.", "making": "클라우드 데이터 시트", "concepts": "공유 · 표준 열 · 품질", "question": "공유 데이터에는 어떤 책임이 따를까?", "output": "Sheets 링크", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 25, "title": "여러 피코 데이터 통합", "phase": "클라우드 애드온", "mission": "여러 팀 데이터를 합쳐 더 큰 질문을 만든다.", "making": "통합 데이터셋", "concepts": "공동 분석 · 필터", "question": "한 팀 데이터와 전체 데이터는 무엇이 다를까?", "output": "통합 분석표", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 26, "title": "웹 GitHub 전시 폴더", "phase": "클라우드 애드온", "mission": "CLI 없이 GitHub 웹에서 프로젝트 기록을 정리한다.", "making": "GitHub README", "concepts": "저장소 · 기록 · README", "question": "프로젝트를 기록하면 무엇이 좋아질까?", "output": "README, 사진, 데이터", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 27, "title": "Streamlit Cloud 배포", "phase": "클라우드 애드온", "mission": "GitHub 저장소를 연결해 웹앱 링크를 만든다.", "making": "배포 링크", "concepts": "배포 · 공유 · URL", "question": "내 앱을 링크로 공유하면 프로젝트가 어떻게 달라질까?", "output": "Streamlit 링크", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 28, "title": "API로 세상 데이터 연결", "phase": "클라우드 애드온", "mission": "날씨 등 외부 데이터와 센서 데이터를 비교한다.", "making": "API 비교 카드", "concepts": "API · JSON · 외부 데이터", "question": "외부 데이터가 우리 해석을 어떻게 바꿀까?", "output": "API 비교 그래프", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 29, "title": "최종 프로젝트 기획", "phase": "메이커 페어 프로젝트", "mission": "재미·데이터·AI·공유 요소를 하나로 묶는다.", "making": "프로젝트 기획서", "concepts": "문제 정의 · 역할", "question": "재미와 의미를 모두 가진 주제는 무엇일까?", "output": "기획서", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 30, "title": "장치 제작과 손코딩 정리", "phase": "메이커 페어 프로젝트", "mission": "센서와 출력 장치를 안정적으로 작동시킨다.", "making": "최종 피코 장치", "concepts": "안정화 · 주석 · 설명", "question": "작동과 이해 중 무엇이 부족한가?", "output": "작동 장치, 주석 코드", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 31, "title": "데이터 수집과 업로드", "phase": "메이커 페어 프로젝트", "mission": "실제 데이터를 수집하고 클라우드에 올린다.", "making": "프로젝트 데이터셋", "concepts": "측정 · 업로드 · 메모", "question": "데이터 맥락은 충분히 기록됐을까?", "output": "CSV, Sheets", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 32, "title": "분석과 대시보드 개선", "phase": "메이커 페어 프로젝트", "mission": "그래프와 지표로 핵심 메시지를 만든다.", "making": "개선된 대시보드", "concepts": "지표 · 그래프 · UI", "question": "가장 설득력 있는 그래프는 무엇인가?", "output": "대시보드 v2", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 33, "title": "GitHub 페이지 정리", "phase": "메이커 페어 프로젝트", "mission": "README, 사진, 링크, AI 기록을 정리한다.", "making": "프로젝트 페이지", "concepts": "문서화 · 공개 기록", "question": "친구가 README만 보고 이해할 수 있을까?", "output": "GitHub repo 정리", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 34, "title": "선택 확장 기능", "phase": "메이커 페어 프로젝트", "mission": "API, QR, 자동 업로드, LED Matrix 중 하나를 추가한다.", "making": "확장 기능", "concepts": "선택 확장 · 서비스화", "question": "확장이 기본 완성을 해치지는 않을까?", "output": "확장 기능 기록", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 35, "title": "클래스 메이커 페어", "phase": "메이커 페어 프로젝트", "mission": "장치와 대시보드를 부스로 전시한다.", "making": "전시 부스", "concepts": "시연 · 피드백 · 발표", "question": "사람들이 직접 체험하며 이해했을까?", "output": "부스 발표, 피드백", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}, {"n": 36, "title": "성찰과 다음 버전", "phase": "메이커 페어 프로젝트", "mission": "내 성장과 프로젝트의 한계를 정리한다.", "making": "성찰문", "concepts": "성장 · 한계 · 다음 버전", "question": "다음 버전에서 가장 바꾸고 싶은 것은?", "output": "성찰문, 개선안", "steps": ["오늘 만들 결과물을 먼저 보고 목표를 확인한다.", "피코·데이터·웹 도구 중 오늘 필요한 부분만 작게 다룬다.", "팀별로 값을 바꾸거나 기준을 정하며 직접 실험한다.", "친구 결과와 비교하고 차이가 생긴 이유를 이야기한다.", "오늘의 산출물을 저장하고 다음 차시 질문을 남긴다."]}]; window.RESOURCES={"README.md": "# 우리 팀 피코 데이터 AI 프로젝트\n\n## 문제\n우리 팀은 ___ 문제를 해결하고 싶었습니다.\n\n## 장치\n- Pico 2 W\n- 센서: ___\n- 출력: ___\n\n## 데이터\n- 측정 장소: ___\n- 측정 시간: ___\n- 열 이름: team, timestamp, place, temp, humidity, light, sound, soil, note\n\n## 대시보드\nStreamlit 링크: ___\n\n## AI 활용\nAI는 ___에 사용했고, 우리는 ___ 방법으로 검증했습니다.\n\n## 한계와 다음 버전\n이번 한계는 ___이고 다음에는 ___을 개선합니다.\n", "prompts/ai-log.md": "# AI 활용 기록\n\n## 날짜\n\n## 하려던 일\n\n## AI에게 한 질문\n```text\n\n```\n\n## 받은 답 요약\n\n## 내가 수정한 부분\n\n## 검증 방법\n\n## 남은 한계\n", "data/sample.csv": "team,timestamp,place,temp,humidity,light,sound,soil,note\nA,2026-05-15 09:00,window,24.8,48,612,42,,맑음\nA,2026-05-15 09:05,back,25.1,50,388,45,,조금 어두움\nB,2026-05-15 09:10,hall,23.9,53,455,58,,쉬는 시간\n", "app.py": "import streamlit as st\nimport pandas as pd\n\nst.set_page_config(page_title=\"우리 반 환경 대시보드\", page_icon=\"🌈\", layout=\"wide\")\nst.title(\"🌈 우리 반 환경 대시보드\")\n\ndf = pd.read_csv(\"data/sample.csv\")\nst.dataframe(df)\n\ncol1, col2, col3 = st.columns(3)\ncol1.metric(\"평균 온도\", f\"{df['temp'].mean():.1f}℃\")\ncol2.metric(\"평균 조도\", f\"{df['light'].mean():.0f}\")\ncol3.metric(\"평균 소음\", f\"{df['sound'].mean():.0f}dB\")\n\nst.line_chart(df.set_index(\"timestamp\")[[\"temp\", \"humidity\"]])\nst.bar_chart(df.groupby(\"place\")[[\"light\", \"sound\"]].mean())\n\nst.info(\"AI를 사용했다면 prompts/ai-log.md에 질문, 수정, 검증 방법을 기록하세요.\")\n", "requirements.txt": "streamlit\npandas\nrequests\n", "api/sample-response.json": "{\n  \"source\": \"sample-weather-api\",\n  \"data\": [{\"date\":\"2026-05-15\", \"weather\":\"sunny\", \"temperature\":24, \"humidity\":45}]\n}\n"};</script><script src="script.js"></script>
+</body></html>

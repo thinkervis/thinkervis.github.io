@@ -1,0 +1,21 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>31차시 · 데이터 수집과 업로드 | Thinkervis Pico Lab</title><link rel="stylesheet" href="../styles.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></head><body><header class="site-header"><a class="brand" href="../index.html"><span class="brand-mark">🧚</span><span><strong>Thinkervis Pico Lab</strong><small>차시별 본문 교재</small></span></a><nav><a href="../index.html#lessons">36차시</a><a href="../index.html#resources">자료실</a></nav><a class="mobile-start" href="../index.html#lessons">목차</a></header><main class="lesson-page"><aside class="lesson-sidebar"><a href="../index.html#lessons">← 전체 차시</a><a href="lesson-30.html">← 이전 차시</a><a href="lesson-32.html">다음 차시 →</a><a href="../index.html#resources">자료실</a></aside><article class="lesson-content"><p class="eyebrow">31차시 · 메이커 페어 프로젝트</p><h1>데이터 수집과 업로드</h1><p class="hero-text">실제 데이터를 수집하고 클라우드에 올린다.</p><section class="lesson-block visual-lesson"><h2>오늘의 흐름</h2><div class="mini-flow"><span>장치</span><em>→</em><span>데이터</span><em>→</em><span>대시보드</span><em>→</em><span>발표</span></div></section><section class="lesson-block"><h2>오늘 만들 것</h2><p>프로젝트 데이터셋</p></section><section class="lesson-block"><h2>왜 배우나요?</h2><p>마지막 단계는 지금까지 배운 모든 것을 하나의 팀 프로젝트로 묶는 시간입니다. 장치가 작동하고, 데이터가 쌓이고, 대시보드가 보여주고, GitHub가 기록해야 합니다.</p><p>프로젝트는 재미와 의미를 모두 가져야 합니다. 친구가 만져보고 반응을 볼 수 있으면서도, 데이터로 문제를 설명할 수 있어야 합니다.</p><p>완성보다 중요한 것은 다음 버전을 말할 수 있는 성장입니다. 한계와 개선 방향을 숨기지 않고 발표합니다.</p></section><section class="lesson-block"><h2>준비물</h2><ul><li>Raspberry Pi Pico 2 W + Grove Shield</li><li>오늘 활동에 맞는 Grove 센서 또는 출력 모듈</li><li>USB 케이블, 노트북, 팀 기록지</li><li>Google Sheets / GitHub / Streamlit 계정 또는 교사 제공 템플릿</li></ul></section><section class="lesson-block"><h2>핵심 개념</h2><p>측정 · 업로드 · 메모</p></section><section class="lesson-block"><h2>따라하기</h2><ol><li>팀 역할을 정하고 오늘 완성할 최소 기능을 고릅니다.</li><li>장치, 데이터, 대시보드, GitHub 기록 중 부족한 부분을 먼저 보완합니다.</li><li>AI는 코드 설명, 오류 점검, 발표 문장 다듬기에 사용하고 반드시 기록합니다.</li><li>친구 피드백을 받아 사용자가 이해하기 어려운 부분을 고칩니다.</li><li>최종 발표에서는 문제, 데이터, 작품, 한계, 다음 버전을 순서대로 말합니다.</li></ol></section><section class="lesson-block code-lab"><h2>실습 코드/데이터</h2><pre><code># 센서값을 읽고 기준에 따라 상태를 나누는 기본 구조입니다.
+from time import sleep
+
+LOW = 300
+HIGH = 700
+
+while True:
+    value = read_sensor()  # 예: 조도, 소리, 온습도 센서값
+    print(&quot;sensor:&quot;, value)
+
+    if value &lt; LOW:
+        state = &quot;낮음&quot;
+    elif value &lt; HIGH:
+        state = &quot;보통&quot;
+    else:
+        state = &quot;높음&quot;
+
+    print(&quot;state:&quot;, state)
+    sleep(1)
+
+# 바꿔보기: LOW와 HIGH 기준값을 우리 팀 데이터에 맞게 바꿔보세요.</code></pre><p>장비와 라이브러리에 따라 함수명이나 핀 번호는 달라질 수 있습니다. 중요한 것은 구조를 읽고 우리 팀 상황에 맞게 고치는 것입니다.</p></section><section class="lesson-block"><h2>바꿔보기 미션</h2><ul><li>기준값, 색상, 메시지, 그래프 제목 중 하나를 우리 팀 상황에 맞게 바꿉니다.</li><li>바꾼 전/후 결과를 사진, 표, 문장 중 하나로 기록합니다.</li><li>친구 팀과 결과가 다르면 데이터나 기준값이 어떻게 다른지 설명합니다.</li></ul></section><section class="lesson-block"><h2>생각 질문</h2><p>데이터 맥락은 충분히 기록됐을까?</p></section><section class="lesson-block"><h2>저장할 산출물</h2><p>CSV, Sheets</p></section><section class="lesson-block"><h2>오류가 나면</h2><ul><li>케이블 방향과 포트 번호를 먼저 확인합니다.</li><li>데이터 열 이름이 예제 코드와 정확히 같은지 확인합니다.</li><li>오류 메시지를 복사하기 전에 첫 줄과 마지막 줄을 읽습니다.</li><li>AI에게 물어볼 때는 코드, 오류 메시지, 내가 하려던 일을 함께 알려줍니다.</li></ul></section><section class="lesson-block"><h2>다음 차시로 이어지는 질문</h2><p>오늘 만든 결과를 더 재미있고 의미 있게 만들려면 어떤 데이터를 더 모으거나 어떤 표현을 더 추가해야 할까요?</p></section></article></main><footer><strong>Thinkervis Pico Lab</strong><span>31차시 본문 교재</span></footer></body></html>

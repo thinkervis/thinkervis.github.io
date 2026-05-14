@@ -1,0 +1,21 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>12차시 · 데이터로 규칙 만들기 | Thinkervis Pico Lab</title><link rel="stylesheet" href="../styles.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></head><body><header class="site-header"><a class="brand" href="../index.html"><span class="brand-mark">🧚</span><span><strong>Thinkervis Pico Lab</strong><small>차시별 본문 교재</small></span></a><nav><a href="../index.html#lessons">36차시</a><a href="../index.html#resources">자료실</a></nav><a class="mobile-start" href="../index.html#lessons">목차</a></header><main class="lesson-page"><aside class="lesson-sidebar"><a href="../index.html#lessons">← 전체 차시</a><a href="lesson-11.html">← 이전 차시</a><a href="lesson-13.html">다음 차시 →</a><a href="../index.html#resources">자료실</a></aside><article class="lesson-content"><p class="eyebrow">12차시 · 데이터 탐구</p><h1>데이터로 규칙 만들기</h1><p class="hero-text">센서값으로 쾌적·주의·나쁨 기준을 만든다.</p><section class="lesson-block visual-lesson"><h2>오늘의 흐름</h2><div class="mini-flow"><span>센서값</span><em>→</em><span>CSV 표</span><em>→</em><span>그래프</span><em>→</em><span>해석</span></div></section><section class="lesson-block"><h2>오늘 만들 것</h2><p>상태 분류 기준표</p></section><section class="lesson-block"><h2>왜 배우나요?</h2><p>이제 장치는 단순히 반응하는 물건이 아니라 데이터를 만드는 관찰 도구가 됩니다. 한 번 본 센서값이 아니라 시간, 장소, 조건과 함께 쌓인 값을 다룹니다.</p><p>팀별 데이터 형식이 다르면 나중에 합칠 수 없으므로 공통 열 이름과 단위를 지키는 것이 중요합니다.</p><p>결론을 빨리 내기보다, 데이터가 말해주는 것과 아직 말해주지 못하는 것을 구분합니다.</p></section><section class="lesson-block"><h2>준비물</h2><ul><li>Raspberry Pi Pico 2 W + Grove Shield</li><li>오늘 활동에 맞는 Grove 센서 또는 출력 모듈</li><li>USB 케이블, 노트북, 팀 기록지</li><li>CSV 양식 또는 활동 기록지</li></ul></section><section class="lesson-block"><h2>핵심 개념</h2><p>분류 · 기준값 · 한계</p></section><section class="lesson-block"><h2>따라하기</h2><ol><li>오늘의 측정 질문을 한 문장으로 정합니다.</li><li>시간, 장소, 조건, 센서값을 같은 표 형식으로 기록합니다.</li><li>값이 이상하거나 비어 있으면 바로 지우지 말고 이유를 메모합니다.</li><li>그래프나 기준표로 데이터가 보여주는 패턴을 찾습니다.</li><li>확실한 해석과 아직 모르는 점을 나눠서 발표 문장으로 정리합니다.</li></ol></section><section class="lesson-block code-lab"><h2>실습 코드/데이터</h2><pre><code># 센서값을 읽고 기준에 따라 상태를 나누는 기본 구조입니다.
+from time import sleep
+
+LOW = 300
+HIGH = 700
+
+while True:
+    value = read_sensor()  # 예: 조도, 소리, 온습도 센서값
+    print(&quot;sensor:&quot;, value)
+
+    if value &lt; LOW:
+        state = &quot;낮음&quot;
+    elif value &lt; HIGH:
+        state = &quot;보통&quot;
+    else:
+        state = &quot;높음&quot;
+
+    print(&quot;state:&quot;, state)
+    sleep(1)
+
+# 바꿔보기: LOW와 HIGH 기준값을 우리 팀 데이터에 맞게 바꿔보세요.</code></pre><p>장비와 라이브러리에 따라 함수명이나 핀 번호는 달라질 수 있습니다. 중요한 것은 구조를 읽고 우리 팀 상황에 맞게 고치는 것입니다.</p></section><section class="lesson-block"><h2>바꿔보기 미션</h2><ul><li>기준값, 색상, 메시지, 그래프 제목 중 하나를 우리 팀 상황에 맞게 바꿉니다.</li><li>바꾼 전/후 결과를 사진, 표, 문장 중 하나로 기록합니다.</li><li>친구 팀과 결과가 다르면 데이터나 기준값이 어떻게 다른지 설명합니다.</li></ul></section><section class="lesson-block"><h2>생각 질문</h2><p>좋은 기준은 항상 같아야 할까?</p></section><section class="lesson-block"><h2>저장할 산출물</h2><p>분류 기준표, 상태 문구</p></section><section class="lesson-block"><h2>오류가 나면</h2><ul><li>케이블 방향과 포트 번호를 먼저 확인합니다.</li><li>데이터 열 이름이 예제 코드와 정확히 같은지 확인합니다.</li><li>오류 메시지를 복사하기 전에 첫 줄과 마지막 줄을 읽습니다.</li><li>AI에게 물어볼 때는 코드, 오류 메시지, 내가 하려던 일을 함께 알려줍니다.</li></ul></section><section class="lesson-block"><h2>다음 차시로 이어지는 질문</h2><p>오늘 만든 결과를 더 재미있고 의미 있게 만들려면 어떤 데이터를 더 모으거나 어떤 표현을 더 추가해야 할까요?</p></section></article></main><footer><strong>Thinkervis Pico Lab</strong><span>12차시 본문 교재</span></footer></body></html>

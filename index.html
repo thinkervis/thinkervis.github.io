@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="피코·코딩·데이터·AI·클라우드 프로젝트형 웹 교재" />
+  <title>Thinkervis Pico Lab | 피코·데이터·AI 프로젝트 교재</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Thinkervis Pico Lab home">
+      <span class="brand-mark">🧚</span>
+      <span><strong>Thinkervis Pico Lab</strong><small>피코로 감지하고, 데이터로 말하고, AI로 확장하기</small></span>
+    </a>
+    <nav>
+      <a href="#journey">학습 여정</a>
+      <a href="#modules">차시 설계</a>
+      <a href="#visuals">비주얼</a>
+      <a href="#addons">애드온</a>
+      <a href="#kits">키트</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Pico · Coding · Data · AI Literacy · Cloud</p>
+        <h1>첫 10분엔 색이 바뀌고,<br />마지막엔 진짜 서비스처럼 공유됩니다.</h1>
+        <p class="hero-text">왕초보도 손코딩으로 바로 반응하는 작품을 만들고, 센서값을 데이터로 쌓아, AI 리터러시 이후 바이브코딩·Streamlit·GitHub·API까지 자연스럽게 확장하는 프로젝트형 웹 교재입니다.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#modules">교재 흐름 보기</a>
+          <a class="button ghost" href="#visuals">시각 설계 보기</a>
+        </div>
+        <div class="trust-row">
+          <span>초반 AI 금지</span><span>직접 그래프 경험</span><span>웹 GitHub 중심</span><span>Streamlit Cloud 배포</span>
+        </div>
+      </div>
+      <div class="hero-device" aria-label="교실 환경 대시보드 미리보기">
+        <div class="device-glow"></div>
+        <div class="dashboard-card">
+          <div class="dash-top"><span></span><span></span><span></span></div>
+          <div class="dash-title">
+            <div><small>Live Classroom</small><strong>우리 반 쾌적도</strong></div>
+            <b class="status">좋음</b>
+          </div>
+          <div class="metric-grid">
+            <article><small>온도</small><strong>24.8℃</strong><em>쾌적</em></article>
+            <article><small>조도</small><strong>612</strong><em>충분</em></article>
+            <article><small>소음</small><strong>42dB</strong><em>보통</em></article>
+          </div>
+          <svg class="chart" viewBox="0 0 560 180" role="img" aria-label="시간별 센서 그래프">
+            <defs>
+              <linearGradient id="lineFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#7c3aed" stop-opacity=".42"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></linearGradient>
+            </defs>
+            <path class="grid-line" d="M10 35H550M10 85H550M10 135H550" />
+            <path class="area" d="M10 130 C80 94, 110 108, 160 80 S260 42, 320 66 S420 144, 550 54 L550 170 L10 170 Z" />
+            <path class="line" d="M10 130 C80 94, 110 108, 160 80 S260 42, 320 66 S420 144, 550 54" />
+            <circle cx="160" cy="80" r="7"/><circle cx="320" cy="66" r="7"/><circle cx="550" cy="54" r="7"/>
+          </svg>
+          <div class="idea-pill">환기 추천: 20분 뒤 다시 확인해요</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="journey" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Learning Journey</p>
+        <h2>도구를 나누지 않고, 하나의 프로젝트가 자라게 합니다.</h2>
+        <p>피코·코딩·데이터·AI·클라우드는 따로 배우는 단원이 아니라, 학생의 질문이 깊어질수록 필요한 도구로 자연스럽게 등장합니다.</p>
+      </div>
+      <div class="journey-map">
+        <div class="journey-step hot"><b>1</b><strong>바로 반응</strong><span>무드등 · 버튼 · 소음 신호등</span></div>
+        <div class="connector"></div>
+        <div class="journey-step"><b>2</b><strong>손코딩 이해</strong><span>입력·조건·반복·출력</span></div>
+        <div class="connector"></div>
+        <div class="journey-step"><b>3</b><strong>데이터 발견</strong><span>CSV · 그래프 · 이상치</span></div>
+        <div class="connector"></div>
+        <div class="journey-step cool"><b>4</b><strong>AI 리터러시</strong><span>환각 · 프롬프트 · 검증</span></div>
+        <div class="connector"></div>
+        <div class="journey-step"><b>5</b><strong>바이브코딩</strong><span>대시보드 · 디버깅 · UI</span></div>
+        <div class="connector"></div>
+        <div class="journey-step green"><b>6</b><strong>공유 프로젝트</strong><span>Sheets · Streamlit · GitHub · API</span></div>
+      </div>
+    </section>
+
+    <section id="modules" class="section split">
+      <div class="sticky-note">
+        <p class="eyebrow">Curriculum UX</p>
+        <h2>36차시를 권장하지만, 30차시로 압축 가능한 모듈형 구조</h2>
+        <p>초반 성공 경험과 AI 리터러시는 절대 생략하지 않습니다. 애드온은 프로젝트의 완성도를 높이는 확장 모듈로 붙입니다.</p>
+      </div>
+      <div class="module-list">
+        <article class="module-card accent-1"><span>01–06</span><h3>재미있는 손코딩</h3><p>첫 화면부터 결과물이 보입니다. 색·버튼·소리·게임으로 “된다!”를 만듭니다.</p></article>
+        <article class="module-card accent-2"><span>07–13</span><h3>센서값이 데이터가 되기</h3><p>CSV, 공통 열 이름, 그래프, 이상치를 학생 프로젝트 맥락 안에서 배웁니다.</p></article>
+        <article class="module-card accent-3"><span>14–17</span><h3>AI 리터러시</h3><p>AI를 쓰기 전에 먼저 의심하고 읽고 검증하는 법을 배웁니다.</p></article>
+        <article class="module-card accent-4"><span>18–23</span><h3>바이브코딩과 대시보드</h3><p>직접 만든 그래프를 AI와 개선하고, Streamlit 대시보드로 표현합니다.</p></article>
+        <article class="module-card accent-5"><span>24–28</span><h3>클라우드 애드온</h3><p>Google Sheets, 여러 피코 데이터, 웹 GitHub, Streamlit Cloud, API를 연결합니다.</p></article>
+        <article class="module-card accent-6"><span>29–36</span><h3>메이커 페어 프로젝트</h3><p>장치·데이터·대시보드·기록·발표가 하나로 연결된 최종 전시를 만듭니다.</p></article>
+      </div>
+    </section>
+
+    <section id="visuals" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Visual Excellence</p>
+        <h2>이미지와 다이어그램은 ‘장식’이 아니라 이해를 돕는 인터페이스여야 합니다.</h2>
+      </div>
+      <div class="visual-grid">
+        <article class="visual-card classroom">
+          <h3>교실 데이터 지도</h3>
+          <div class="room-map">
+            <span class="window">창가</span><i class="seat s1">612</i><i class="seat s2">508</i><i class="seat s3 hot">731</i><i class="seat s4">455</i><i class="seat s5 cool">388</i><i class="seat s6">529</i><b>교탁</b>
+          </div>
+          <p>자리별 센서값을 색과 위치로 보여주어 “왜 데이터를 합쳐야 하는지” 직관적으로 이해시킵니다.</p>
+        </article>
+        <article class="visual-card flow">
+          <h3>데이터 흐름 다이어그램</h3>
+          <div class="data-flow">
+            <span>피코</span><em></em><span>CSV</span><em></em><span>Sheets</span><em></em><span>Streamlit</span><em></em><span>발표</span>
+          </div>
+          <p>학생이 지금 배우는 도구가 전체 프로젝트의 어디에 위치하는지 계속 볼 수 있게 합니다.</p>
+        </article>
+        <article class="visual-card prompt">
+          <h3>AI 검증 카드</h3>
+          <ul class="check-list">
+            <li>AI가 만든 코드를 읽었나요?</li>
+            <li>모르는 줄에 표시했나요?</li>
+            <li>우리 데이터 열 이름과 맞나요?</li>
+            <li>실행 결과를 검증했나요?</li>
+          </ul>
+          <p>AI 사용을 금지하지 않고, 책임 있게 쓰는 루틴을 시각화합니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="addons" class="section dark-panel">
+      <div>
+        <p class="eyebrow">Add-ons</p>
+        <h2>왕초보도 가능한 확장: 클릭, 템플릿, 공유 링크 중심</h2>
+      </div>
+      <div class="addon-grid">
+        <article><strong>Google Sheets</strong><p>CSV를 클라우드 데이터 공책으로 올리고 팀별 데이터를 합칩니다.</p></article>
+        <article><strong>Streamlit Cloud</strong><p>파이썬 그래프를 링크로 공유되는 웹 대시보드로 바꿉니다.</p></article>
+        <article><strong>웹 GitHub</strong><p>CLI 없이 README, data.csv, 사진, AI 활용 기록을 정리합니다.</p></article>
+        <article><strong>API</strong><p>날씨·미세먼지 같은 외부 데이터와 교실 센서값을 비교합니다.</p></article>
+      </div>
+    </section>
+
+    <section id="kits" class="section kits">
+      <div class="section-heading">
+        <p class="eyebrow">Class Kits</p>
+        <h2>키트는 부품 목록이 아니라 수업 경험을 설계합니다.</h2>
+      </div>
+      <div class="kit-grid">
+        <article class="kit-card"><span>심플</span><h3>바로 반응 입문</h3><p>Pico 2 W, Grove Shield, Button, Light Sensor, RGB LED/NeoPixel, Buzzer</p><b>4–8차시 · 첫 성공 경험</b></article>
+        <article class="kit-card featured"><span>기본 추천</span><h3>정규 수업 표준형</h3><p>온습도, 조도, 소리, 토양수분, OLED, NeoPixel까지 포함해 데이터와 작품성을 모두 잡습니다.</p><b>15–36차시 · 가장 추천</b></article>
+        <article class="kit-card"><span>심화</span><h3>전시·IoT 확장</h3><p>공기질, CO₂, LED Matrix, Servo, microSD, 배터리, 라즈베리파이 서버 연동</p><b>동아리 · 메이커 페어</b></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Thinkervis Pico Lab</strong>
+    <span>학생이 피코로 세상을 감지하고, 데이터로 의미를 발견하고, AI와 클라우드로 프로젝트를 확장하는 교재.</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

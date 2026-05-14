@@ -38,6 +38,23 @@ function enhanceCodeBlocks(root=document){
     });
   });
 }
+function enhanceRgbMixers(root=document){
+  $$('.rgb-mixer',root).forEach(mixer=>{
+    const preview=$('.rgb-preview',mixer), out=$('.rgb-output code',mixer), btn=$('.copy-rgb',mixer);
+    const update=()=>{
+      const vals={};
+      $$('input[type="range"]',mixer).forEach(input=>{vals[input.dataset.channel]=Number(input.value); input.nextElementSibling.textContent=input.value});
+      const rgb=`${vals.r}, ${vals.g}, ${vals.b}`;
+      preview.style.background=`rgb(${rgb})`;
+      preview.style.boxShadow=`0 24px 70px rgba(${vals.r},${vals.g},${vals.b},.35)`;
+      out.textContent=`team_color = (${rgb})`;
+    };
+    $$('input[type="range"]',mixer).forEach(input=>input.addEventListener('input',update));
+    btn?.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(out.textContent);btn.textContent='복사됨';setTimeout(()=>btn.textContent='RGB 코드 복사',1300)}catch{btn.textContent='복사 실패';setTimeout(()=>btn.textContent='RGB 코드 복사',1300)}});
+    update();
+  });
+}
 enhanceCodeBlocks();
+enhanceRgbMixers();
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')}),{threshold:.08});
 $$('.lesson-card,.visual-card,.kit-card,.quick-card,.journey-step,.resource-card').forEach(el=>observer.observe(el));

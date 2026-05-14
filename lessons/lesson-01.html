@@ -33,15 +33,15 @@
     <h1>내 책상 무드등: 코드가 색을 바꾼다</h1>
 
     <figure class="lesson-hero-figure">
-      <img src="../assets/images/lesson01-pico-mood-light-hero.png" alt="책상 위 피코와 보라색 RGB 무드등 일러스트">
+      <img src="../assets/images/lesson01-grove-shield-rgb-led-hero.png" alt="책상 위 Pico 2 W, Grove Shield, Grove RGB LED 무드등 일러스트">
       <figcaption>그림 1-1 · 코드의 숫자가 책상 위 무드등 색으로 바뀌는 장면</figcaption>
     </figure>
 
     <section class="lesson-block narrative" id="mission">
       <h2>이번 시간의 미션</h2>
-      <p>오늘은 긴 설명보다 먼저 <strong>눈에 보이는 성공</strong>을 만듭니다. 피코를 연결하고, 짧은 코드를 실행한 뒤, 숫자 하나를 바꿔 LED의 반응이 달라지는 것을 확인합니다. 아직 센서도, 데이터 분석도, AI도 필요 없습니다. 먼저 “내가 바꾼 코드가 현실의 장치를 움직인다”는 감각을 잡는 것이 목표입니다.</p>
+      <p>오늘은 긴 설명보다 먼저 <strong>눈에 보이는 성공</strong>을 만듭니다. Pico 2 W에 Grove Shield를 꽂고, Grove RGB LED를 케이블로 연결한 뒤, 숫자 하나를 바꿔 LED의 반응이 달라지는 것을 확인합니다. 아직 센서도, 데이터 분석도, AI도 필요 없습니다. 먼저 “내가 바꾼 코드가 현실의 장치를 움직인다”는 감각을 잡는 것이 목표입니다.</p>
       <p>첫 번째 목표는 피코 보드 안의 작은 LED를 깜박이게 하는 것입니다. 이 단계는 아주 단순하지만 중요합니다. 보드가 노트북과 잘 연결되었는지, 코드가 피코로 잘 전달되는지, 실행과 정지가 어떻게 이루어지는지를 가장 안전하게 확인할 수 있기 때문입니다.</p>
-      <p>두 번째 목표는 RGB LED 또는 NeoPixel을 이용해 우리 팀의 색을 만드는 것입니다. 색은 숫자로 표현됩니다. 예를 들어 <code>(124, 58, 237)</code>은 보라색에 가까운 빛을 만듭니다. 오늘은 이 세 숫자를 바꾸며 색이 어떻게 변하는지 실험하고, 우리 팀 무드등의 색과 의미를 정합니다.</p>
+      <p>두 번째 목표는 Grove RGB LED를 이용해 우리 팀의 색을 만드는 것입니다. 색은 숫자로 표현됩니다. 예를 들어 <code>(124, 58, 237)</code>은 보라색에 가까운 빛을 만듭니다. 오늘은 이 세 숫자를 바꾸며 색이 어떻게 변하는지 실험하고, 우리 팀 무드등의 색과 의미를 정합니다.</p>
       <ul class="mission-list">
         <li>피코 내장 LED를 깜박이게 한다.</li>
         <li>RGB 숫자를 바꿔 무드등 색을 만든다.</li>
@@ -65,7 +65,7 @@
           <rect x="24" y="24" width="932" height="412" rx="36" fill="#fffdf7" stroke="rgba(22,21,31,.10)"/>
           <rect x="78" y="86" width="280" height="220" rx="30" fill="#f8fafc" stroke="#cbd5e1" stroke-width="3" filter="url(#shadow)"/>
           <text x="218" y="135" text-anchor="middle" class="svg-big">Pico 2 W</text>
-          <text x="218" y="166" text-anchor="middle" class="svg-small">Grove Shield에 꽂아 사용</text>
+          <text x="218" y="166" text-anchor="middle" class="svg-small">Grove Shield 위에 꽂아 사용</text>
           <circle cx="128" cy="226" r="12" fill="#22c55e"/><text x="154" y="232" class="svg-small">GND</text>
           <circle cx="128" cy="260" r="12" fill="#f59e0b"/><text x="154" y="266" class="svg-small">3V3</text>
           <circle cx="306" cy="226" r="12" fill="#7c3aed"/><text x="244" y="232" class="svg-small">DATA</text>
@@ -77,10 +77,10 @@
           <text x="748" y="225" text-anchor="middle" fill="white" class="svg-title">RGB LED</text>
           <text x="748" y="252" text-anchor="middle" fill="white" class="svg-caption">색으로 결과 확인</text>
           <rect x="100" y="350" width="780" height="58" rx="20" fill="#111827"/>
-          <text x="490" y="386" text-anchor="middle" fill="white" class="svg-title">DATA는 색 명령, 3V3는 전원, GND는 기준점입니다.</text>
+          <text x="490" y="386" text-anchor="middle" fill="white" class="svg-title">Grove 케이블 하나로 DATA, 전원, GND가 함께 연결됩니다.</text>
         </svg>
       </div>
-      <div class="visual-note"><b>그림 1-2</b><span>정확한 연결 확인용</span><p>학교 키트에 따라 DATA 포트 번호는 달라질 수 있습니다. 코드를 실행하기 전, 실제 연결한 포트 번호를 확인하세요.</p></div>
+      <div class="visual-note"><b>그림 1-2</b><span>정확한 연결 확인용</span><p>우리는 Pico 2 W에 Grove Shield를 꽂고 Grove 케이블로 모듈을 연결합니다. 복잡한 점퍼선 배선보다 포트 이름과 케이블 방향 확인이 더 중요합니다.</p></div>
     </section>
 
     <section class="lesson-block">
@@ -89,7 +89,8 @@
         <ul>
           <li>Raspberry Pi Pico 2 W</li>
           <li>Grove Shield for Pico</li>
-          <li>Grove RGB LED 또는 NeoPixel 모듈</li>
+          <li>Grove RGB LED 모듈</li>
+          <li>Grove 케이블</li>
           <li>USB 케이블</li>
         </ul>
         <ul>
@@ -133,31 +134,30 @@ while True:
 
     <section class="lesson-block code-lab" id="code2">
       <h2>코드 1-2 · 우리 팀 컬러 무드등 만들기</h2>
-      <p>이제 RGB LED 또는 NeoPixel로 색을 표현합니다. 아래 코드는 NeoPixel을 사용할 때의 예시입니다. Grove RGB LED 모듈을 쓴다면 선생님이 제공한 예제 코드에서 <strong>색상값을 바꾸는 부분</strong>을 찾아 같은 방식으로 실험하면 됩니다.</p>
-      <pre><code>from machine import Pin
-from neopixel import NeoPixel
-from time import sleep
+      <p>이제 Grove Shield에 Grove 케이블로 연결한 Grove RGB LED 모듈로 색을 표현합니다. 아래 코드는 수업용 예시 구조입니다. 실제 Grove RGB LED 라이브러리와 포트 이름은 학교 키트 예제에 맞추되, 핵심은 <strong>RGB 숫자를 바꾸어 색을 정한다</strong>는 점입니다.</p>
+      <pre><code>from time import sleep
 
-# 실제 연결한 포트에 맞게 핀 번호를 바꿉니다.
-pixel = NeoPixel(Pin(15), 1)
+# 예시: Grove RGB LED 모듈을 D16 포트에 연결했다고 가정합니다.
+# 실제 수업 키트의 Grove RGB LED 예제 코드에 맞게 객체 생성 부분은 조정합니다.
+rgb_led = GroveRgbLed(port="D16")
 
 # 우리 팀 컬러를 RGB 숫자로 정합니다.
 team_color = (124, 58, 237)  # 보라색 계열
 
 while True:
-    pixel[0] = team_color
-    pixel.write()
+    rgb_led.set_color(team_color)
     sleep(1)</code></pre>
       <h3>RGB 숫자 실험</h3>
-      <table class="prompt-table">
-        <tbody>
-          <tr><th>빨강</th><td><code>(255, 0, 0)</code></td></tr>
-          <tr><th>초록</th><td><code>(0, 255, 0)</code></td></tr>
-          <tr><th>파랑</th><td><code>(0, 0, 255)</code></td></tr>
-          <tr><th>보라</th><td><code>(124, 58, 237)</code></td></tr>
-          <tr><th>우리 팀 색</th><td>직접 정해 보기</td></tr>
-        </tbody>
-      </table>
+      <p>아래 조절기를 움직여 우리 팀 색을 먼저 만들어 보세요. 마음에 드는 색이 나오면 RGB 값을 코드의 <code>team_color</code>에 넣습니다.</p>
+      <div class="rgb-mixer" data-r="124" data-g="58" data-b="237">
+        <div class="rgb-preview" aria-label="RGB 색 미리보기"></div>
+        <div class="rgb-controls">
+          <label>R <input type="range" min="0" max="255" value="124" data-channel="r"><b>124</b></label>
+          <label>G <input type="range" min="0" max="255" value="58" data-channel="g"><b>58</b></label>
+          <label>B <input type="range" min="0" max="255" value="237" data-channel="b"><b>237</b></label>
+        </div>
+        <div class="rgb-output"><code>team_color = (124, 58, 237)</code><button type="button" class="copy-rgb">RGB 코드 복사</button></div>
+      </div>
     </section>
 
     <section class="lesson-block" id="check">

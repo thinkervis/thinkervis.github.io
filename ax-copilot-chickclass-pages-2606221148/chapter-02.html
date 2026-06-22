@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>챕터 2. 프롬프트 병아리반 — Copilot에게 심부름 잘 시키기</title><link rel="stylesheet" href="assets/style.css"></head><body><div class="layout"><nav class="side">
+    <a class="brand" href="index.html">AX Copilot<br><span>병아리반</span></a>
+    <a class="" href="chapter-01.html">1. Copilot 병아리반 — 업무 AI와 첫 인사하기</a><a class="active" href="chapter-02.html">2. 프롬프트 병아리반 — Copilot에게 심부름 잘 시키기</a><a class="" href="chapter-03.html">3. 문서 요약 병아리반 — 긴 자료를 회의 준비로 바꾸기</a><a class="" href="chapter-04.html">4. 메일과 보고서 병아리반 — 예의와 책임을 지키며 초안 만들기</a><a class="" href="chapter-05.html">5. 데이터 병아리반 — 숫자를 믿기 전에 질문하기</a><a class="" href="chapter-06.html">6. HTML MVP 병아리반 — 아이디어를 화면으로 보여주기</a><a class="" href="chapter-07.html">7. 강사 지도서 — 수업 전날부터 마무리까지</a><a class="" href="chapter-08.html">8. 병아리 실습실 — 바로 써먹는 샘플 프로젝트 8개</a><a class="" href="chapter-09.html">9. 병아리 질문함 — 강사가 자주 받는 질문 10개</a>
+  </nav><main class="main"><article class="chapter"><h2>챕터 2. 프롬프트 병아리반 — Copilot에게 심부름 잘 시키기</h2><p class="lead">프롬프트는 어려운 주문서가 아닙니다. 쉽게 말해 ‘업무 심부름 메모’입니다. 사람에게 심부름을 시킬 때도 무엇을, 왜, 누구에게, 어떤 모양으로 해달라는지 알려줘야 하듯 Copilot에게도 같은 정보가 필요합니다.</p><section class="lesson"><h3>나쁜 부탁과 좋은 부탁</h3>
+        <p>“보고서 써줘”라는 말은 너무 넓습니다. Copilot은 보고서를 만들 수는 있지만, 누구에게 보고하는지, 왜 보고하는지, 얼마나 길어야 하는지, 어떤 내용을 빼야 하는지 모릅니다. 그래서 결과가 일반적이고 길어지거나, 반대로 중요한 내용이 빠질 수 있습니다.</p>
+        <p>좋은 프롬프트에는 보통 여섯 가지가 들어갑니다. 목적, 배경, 대상 독자, 결과물 형식, 제약조건, 검토 기준입니다. 처음부터 여섯 가지를 모두 넣으려고 하면 부담스럽습니다. 병아리반에서는 먼저 목적·대상·형식 세 가지만 넣어도 충분히 좋아집니다.</p>
+        <div class="copy-box"><button class="copy-btn" type="button">복사</button><pre>나쁜 예:
+이 자료 보고서로 만들어줘.
+
+좋은 예:
+아래 자료를 팀장에게 공유할 1페이지 보고서 초안으로 정리해줘.
+목적은 의사결정 준비이고, 형식은 핵심 요약 / 근거 / 리스크 / 확인 질문으로 나눠줘.
+원문에 없는 내용은 추정이라고 표시해줘.</pre></div>
+        <div class="chick"><div class="q">[병아리] 프롬프트를 길게 쓰면 시간이 더 걸리지 않나요?</div><div class="a">처음에는 그렇습니다. 하지만 자주 하는 업무는 템플릿으로 저장해두면 됩니다. 매번 새로 긴 문장을 쓰자는 뜻이 아니라, 반복 업무에 쓸 좋은 심부름 메모를 만들어두자는 뜻입니다.</div></div>
+      </section>
+<section class="lesson"><h3>따라하기: 내 업무 프롬프트 만들기</h3>
+        <p>수강생에게 종이나 메모장을 열게 한 뒤, 자기 업무 하나를 적게 합니다. 예를 들어 “주간보고 작성”, “고객 문의 답변”, “회의록 정리”, “교육 안내문 작성”처럼 매주 반복되는 일이 좋습니다.</p>
+        <ol><li>먼저 업무 이름을 씁니다.</li><li>이 결과물을 볼 사람을 씁니다.</li><li>원하는 결과물 모양을 씁니다.</li><li>절대 하면 안 되는 일을 씁니다.</li><li>확인해야 할 질문을 요청합니다.</li></ol>
+        <figure><div class="shot">화면 예시 자리</div><figcaption>그림 2-1 수강생이 자기 업무를 프롬프트 템플릿으로 바꾸는 활동</figcaption></figure>
+        <div class="dialogue"><div class="teacher"><b>강사</b> “여러분의 업무는 특수해서 AI가 못 할 수도 있습니다. 괜찮습니다. 업무 전체를 맡기지 말고, 읽기·정리·초안 만들기 중 한 단계만 맡겨봅시다.”</div><div class="student"><b>수강생 예상</b> “제 업무는 너무 특수해서 예제가 안 맞는 것 같아요.”</div><div class="answer"><b>강사 답변</b> “그럴수록 업무 전체가 아니라 작은 단계를 골라야 합니다. 예를 들어 판단은 사람이 하고, 자료 정리나 초안 작성만 Copilot에게 맡길 수 있습니다.”</div></div>
+      </section>
+<section class="lesson"><h3>프롬프트 고치기 연습</h3>
+        <p>강사는 일부러 부족한 프롬프트를 보여주고 수강생에게 고치게 해야 합니다. 이것이 가장 효과적인 훈련입니다.</p>
+        <table><tr><th>부족한 프롬프트</th><th>무엇이 빠졌나요?</th><th>고친 예</th></tr><tr><td>메일 답장 써줘</td><td>상대, 톤, 약속 가능 범위</td><td>협력사 담당자에게 정중히 답장하되, 일정 단축을 확정 약속하지 말고 내부 검토 후 회신하겠다고 써줘.</td></tr><tr><td>데이터 분석해줘</td><td>분석 질문, 기준, 검증</td><td>문의 유형 TOP 5, 평균 처리시간이 긴 제품군, 재문의율이 높은 항목을 계산 기준과 함께 정리해줘.</td></tr><tr><td>요약해줘</td><td>목적, 형식, 후속 질문</td><td>회의 준비용으로 핵심 주장, 근거, 리스크, 회의 질문 3개로 나눠 정리해줘.</td></tr></table>
+      </section><div class="pager"><a href="chapter-01.html">← 이전 장</a><a href="chapter-03.html">다음 장 →</a></div></article></main></div><script src="assets/app.js"></script></body></html>

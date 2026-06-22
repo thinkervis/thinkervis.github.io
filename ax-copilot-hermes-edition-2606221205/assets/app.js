@@ -5,6 +5,10 @@ document.querySelectorAll(".copy-btn").forEach((button)=>{
     await navigator.clipboard.writeText(text);
     const old = button.textContent;
     button.textContent = "복사됨";
-    setTimeout(()=>button.textContent = old, 1200);
+    button.classList.add("copied");
+    setTimeout(()=>{
+      button.textContent = old;
+      button.classList.remove("copied");
+    }, 1400);
   });
 });

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AX Copilot 병아리반 강사용 교재 - Hermes x Thinkervis</title>
+  <style>
+    :root{--ink:#24292f;--muted:#667085;--line:#d0d7de;--paper:#fff;--bg:#f7f7f2;--yellow:#ffe08a;--blue:#0f6cbd;--green:#0f7b6c;--red:#c10933;--soft:#fffdf4}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;line-height:1.9;word-break:keep-all}.wrap{max-width:980px;margin:0 auto;padding:42px 20px 90px}
+    header,.chapter{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:48px;margin-bottom:30px;box-shadow:0 8px 22px rgba(0,0,0,.04)}.chapter{break-before:page;page-break-before:always}
+    h1{font-size:38px;line-height:1.2;margin:8px 0 16px}h2{font-size:30px;line-height:1.35;margin:0 0 18px;border-bottom:3px solid var(--yellow);padding-bottom:12px}h3{font-size:22px;margin:34px 0 12px}p{margin:0 0 16px}.eyebrow{font-size:13px;font-weight:900;color:var(--red);letter-spacing:.08em}.meta{color:var(--muted);font-size:14px}
+    .toc{background:var(--soft);border:1px solid #eedc82;border-radius:12px;padding:20px;margin-top:24px}.toc a{display:block;color:var(--ink);text-decoration:none;font-weight:750;padding:4px 0}.lead{font-size:18px;background:#fbfcfd;border-left:6px solid var(--yellow);padding:18px 20px;border-radius:12px}.lesson{margin-top:28px}.note,.tip,.chick,.dialogue,.scriptbox,figure,pre,table{break-inside:avoid;page-break-inside:avoid}.note{border-left:6px solid var(--blue);background:#f4f8ff;border-radius:12px;padding:18px 20px;margin:22px 0}.tip{border-left:6px solid var(--green);background:#f2fbf8;border-radius:12px;padding:14px 18px;margin:18px 0}.chick{background:#fff8d6;border:1px solid #efd36d;border-radius:14px;padding:18px 20px;margin:22px 0}.q{font-weight:900;margin-bottom:8px}.a{color:#3b3b32}.dialogue{display:grid;gap:10px;margin:20px 0}.teacher,.student,.answer{border-radius:12px;padding:14px 16px}.teacher{background:#f4f8ff;border-left:5px solid var(--blue)}.student{background:#fff8ef;border-left:5px solid #a65f00}.answer{background:#f2fbf8;border-left:5px solid var(--green)}.scriptbox{background:#fbfcfd;border:1px solid var(--line);border-radius:12px;padding:20px;margin:18px 0;font-weight:650}figure{margin:22px 0}.shot{height:190px;border:2px dashed #c8b85a;border-radius:14px;background:#fffbe6;display:flex;align-items:center;justify-content:center;color:#8a6d00;font-weight:900}figcaption{font-size:14px;color:var(--muted);margin-top:8px}pre{white-space:pre-wrap;background:#171717;color:#f5f5f5;border-radius:12px;padding:18px;font-size:14px;line-height:1.65;overflow:auto}table{width:100%;border-collapse:collapse;font-size:14px;margin:18px 0}th,td{border:1px solid var(--line);padding:12px;vertical-align:top}th{background:#f2f4f7}ol,ul{padding-left:24px}.print{position:fixed;right:18px;bottom:18px;border:0;border-radius:999px;background:var(--red);color:#fff;padding:12px 18px;font-weight:900;cursor:pointer}
+    @media(max-width:760px){.wrap{padding:20px 10px 70px}header,.chapter{padding:26px}h1{font-size:29px}.print{position:static;width:100%;border-radius:10px;margin-bottom:16px}.shot{height:130px}}
+    @media print{body{background:#fff}.wrap{max-width:none;padding:0}header,.chapter{border:0;box-shadow:none;border-radius:0;padding:24px 0;margin:0}.print{display:none}.chapter{break-before:page;page-break-before:always}}
+  </style>
+</head>
+<body>
+  <button class="print" onclick="window.print()">PDF로 저장/인쇄</button>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">Chick Class Instructor Textbook</div>
+      <h1>AX Copilot 병아리반 강사용 교재</h1>
+      <p class="meta">작성: Hermes x Thinkervis · 생성시각: 2606221145 · 참고 스타일: 챕터1_깃허브_병아리반(260616)</p>
+      <p>이 교재는 Copilot을 처음 가르치는 강사가 먼저 공부하고, 그대로 수업에 가져가도 흐름이 무너지지 않도록 만든 초보 친화형 교재입니다. 설명을 빨리 끝내는 자료가 아니라, 수강생이 “아, 그래서 이렇게 쓰는 거구나” 하고 따라오도록 문장과 활동을 천천히 배치했습니다.</p>
+      <div class="toc"><a href="#ch1">챕터 1. Copilot 병아리반 — 업무 AI와 첫 인사하기</a><a href="#ch2">챕터 2. 프롬프트 병아리반 — Copilot에게 심부름 잘 시키기</a><a href="#ch3">챕터 3. 문서 요약 병아리반 — 긴 자료를 회의 준비로 바꾸기</a><a href="#ch4">챕터 4. 메일과 보고서 병아리반 — 예의와 책임을 지키며 초안 만들기</a><a href="#ch5">챕터 5. 데이터 병아리반 — 숫자를 믿기 전에 질문하기</a><a href="#ch6">챕터 6. HTML MVP 병아리반 — 아이디어를 화면으로 보여주기</a><a href="#ch7">챕터 7. 강사 지도서 — 수업 전날부터 마무리까지</a></div>
+    </header>
+    <article class="chapter" id="ch1"><h2>챕터 1. Copilot 병아리반 — 업무 AI와 첫 인사하기</h2><p class="lead">여러분은 혹시 Copilot이라는 말을 들어보았나요? 이름만 들으면 비행기 조종석의 부조종사처럼 느껴지기도 합니다. 실제로도 아주 비슷합니다. Copilot은 여러분 대신 회사를 운영하거나 결정을 내려주는 사람이 아니라, 여러분이 이미 하고 있는 일을 옆에서 함께 조종해주는 업무 파트너입니다.</p><section class="lesson"><h3>Copilot이 왜 필요할까</h3>
+        <p>회사 일은 대단한 창의력만으로 이루어지지 않습니다. 긴 문서를 읽고, 메일을 정리하고, 회의 내용을 요약하고, 표에서 이상한 숫자를 찾고, 보고서 초안을 만드는 일이 매일 반복됩니다. 이런 일들은 중요하지만 처음 시작하는 데 시간이 많이 걸립니다. Copilot은 바로 이 “시작하는 시간”을 줄여줍니다.</p>
+        <p>예를 들어 20쪽짜리 회의 자료를 받았다고 해봅시다. 사람은 처음부터 끝까지 읽으며 중요한 부분에 밑줄을 긋고, 회의에서 물어볼 질문을 따로 적어야 합니다. Copilot에게는 “핵심 주장, 근거, 리스크, 회의 질문으로 나눠 정리해줘”라고 부탁할 수 있습니다. 그러면 완벽한 답은 아니더라도, 우리가 검토를 시작할 수 있는 초안이 생깁니다.</p>
+        <aside class="note"><strong>잠깐만요 │ Copilot은 정답 자판기가 아닙니다</strong><p>Copilot은 말을 잘하는 도구라서 답변이 그럴듯해 보일 수 있습니다. 하지만 그럴듯한 문장과 정확한 업무 판단은 다릅니다. 숫자, 일정, 계약, 인사, 법무, 고객 정보처럼 중요한 내용은 반드시 사람이 원문과 대조해야 합니다.</p></aside>
+        <figure><div class="shot">화면 예시 자리</div><figcaption>그림 1-1 Copilot Chat 화면에 업무 질문을 입력하는 모습</figcaption></figure>
+        <div class="chick"><div class="q">[병아리] 그러면 Copilot이 틀릴 수도 있는데 왜 써야 하나요?</div><div class="a">좋은 질문입니다. Copilot은 최종 답을 대신 책임지는 도구가 아니라, 사람이 더 빨리 판단을 시작하도록 돕는 도구입니다. 빈 종이에서 시작하는 것보다 초안을 보고 고치는 편이 훨씬 빠른 경우가 많습니다.</div></div>
+      </section>
+<section class="lesson"><h3>Copilot과 일반 AI 챗봇은 무엇이 다를까</h3>
+        <p>Copilot도 대화창에 질문을 넣고 답을 받는다는 점에서는 일반 AI 챗봇과 비슷합니다. 하지만 회사에서 쓰는 Copilot은 Microsoft 365 업무 흐름과 연결될 수 있다는 점이 중요합니다. Outlook에서는 메일 답장을 돕고, Word에서는 문서 초안을 돕고, Excel에서는 표를 이해하는 데 도움을 줄 수 있습니다.</p>
+        <p>물론 모든 수강생 화면에 같은 버튼이 보이는 것은 아닙니다. 회사 계정, 라이선스, 관리자 정책, 앱 버전, 파일 권한에 따라 보이는 기능이 다를 수 있습니다. 그래서 강사는 “제가 누르는 버튼만 따라 하세요”라고 말하기보다, “화면이 달라도 같은 원리를 Copilot Chat에서 연습할 수 있습니다”라고 안내해야 합니다.</p>
+        <table><tr><th>구분</th><th>쉽게 말하면</th><th>강의에서 쓰는 방법</th></tr><tr><td>Copilot Chat</td><td>대화창에서 업무를 부탁하는 기본 입구</td><td>프롬프트 연습, 문서 발췌 요약, 메일 초안</td></tr><tr><td>앱 안 Copilot</td><td>Word, Excel, Outlook 안에서 나타나는 도움 기능</td><td>앱별 실습이 가능할 때 사용</td></tr><tr><td>조직형 Copilot</td><td>권한이 있는 조직 자료와 연결되는 업무 AI</td><td>보안과 권한 설명을 함께 해야 함</td></tr></table>
+        <div class="dialogue"><div class="teacher"><b>강사</b> “오늘 화면이 제 화면과 조금 달라도 괜찮습니다. Copilot은 회사 설정에 따라 버튼 위치가 다를 수 있습니다. 우리는 버튼 암기가 아니라, 업무를 어떻게 설명하고 결과를 어떻게 검토할지 배우겠습니다.”</div><div class="student"><b>수강생 예상</b> “제 화면에는 파일 첨부 버튼이 없어요.”</div><div class="answer"><b>강사 답변</b> “괜찮습니다. 문서 전체를 첨부하지 못하면 일부 내용을 복사해서 붙여넣고 ‘아래 발췌문 기준으로’라고 범위를 제한하면 됩니다.”</div></div>
+      </section>
+<section class="lesson"><h3>첫 실습: Copilot에게 자기소개 시키기</h3>
+        <p>처음부터 어려운 보고서나 데이터 분석을 시키면 수강생이 겁을 먹습니다. 첫 실습은 아주 가볍게 시작하는 것이 좋습니다. 아래 프롬프트를 Copilot Chat에 넣어봅니다.</p>
+        <pre>나는 오늘 Copilot을 처음 배우는 직장인입니다.
+Copilot이 어떤 일을 도와줄 수 있는지 초보자도 이해할 수 있게 설명해줘.
+단, 과장하지 말고 Copilot이 못하는 일과 사람이 확인해야 하는 일도 함께 알려줘.</pre>
+        <p>결과가 나오면 강사는 바로 “잘 나왔네요”라고 끝내지 않습니다. 수강생에게 세 가지를 물어봅니다. 첫째, Copilot이 할 수 있다고 말한 일 중 내 업무와 가까운 것은 무엇인가요? 둘째, 사람이 확인해야 한다고 말한 부분은 무엇인가요? 셋째, 답변에서 너무 일반적이거나 애매한 표현은 무엇인가요?</p>
+        <aside class="tip"><strong>tip</strong><p>첫 실습의 목표는 멋진 답을 얻는 것이 아니라, Copilot 답변을 함께 읽고 판단하는 경험을 만드는 것입니다.</p></aside>
+      </section>
+<section class="lesson"><h3>강사가 기억할 90초 오프닝</h3>
+        <div class="scriptbox">“오늘 우리가 배울 Copilot은 여러분의 일을 대신 책임지는 도구가 아닙니다. 대신 긴 자료를 빨리 읽고, 복잡한 내용을 정리하고, 메일이나 보고서의 첫 초안을 만들어주는 업무 파트너입니다. 중요한 점은 Copilot이 만든 답을 그대로 붙여넣는 것이 아니라, 그 답을 보고 더 좋은 질문을 하고, 근거를 확인하고, 우리 업무에 맞게 고치는 것입니다. 그래서 오늘 수업의 목표는 버튼을 많이 외우는 것이 아닙니다. 내 업무를 Copilot에게 어떻게 설명할지, 나온 결과를 어떻게 의심하고 다듬을지 익히는 것입니다.”</div>
+        <div class="chick"><div class="q">[병아리] 강사가 이 말을 꼭 외워야 하나요?</div><div class="a">그대로 외울 필요는 없습니다. 다만 첫 3분에 Copilot을 과장하지 않고, 수강생을 안심시키고, 오늘의 학습 목표를 분명히 말해야 합니다. 이 오프닝은 그 기준을 잡아주는 예시입니다.</div></div>
+      </section></article>
+<article class="chapter" id="ch2"><h2>챕터 2. 프롬프트 병아리반 — Copilot에게 심부름 잘 시키기</h2><p class="lead">프롬프트는 어려운 주문서가 아닙니다. 쉽게 말해 ‘업무 심부름 메모’입니다. 사람에게 심부름을 시킬 때도 무엇을, 왜, 누구에게, 어떤 모양으로 해달라는지 알려줘야 하듯 Copilot에게도 같은 정보가 필요합니다.</p><section class="lesson"><h3>나쁜 부탁과 좋은 부탁</h3>
+        <p>“보고서 써줘”라는 말은 너무 넓습니다. Copilot은 보고서를 만들 수는 있지만, 누구에게 보고하는지, 왜 보고하는지, 얼마나 길어야 하는지, 어떤 내용을 빼야 하는지 모릅니다. 그래서 결과가 일반적이고 길어지거나, 반대로 중요한 내용이 빠질 수 있습니다.</p>
+        <p>좋은 프롬프트에는 보통 여섯 가지가 들어갑니다. 목적, 배경, 대상 독자, 결과물 형식, 제약조건, 검토 기준입니다. 처음부터 여섯 가지를 모두 넣으려고 하면 부담스럽습니다. 병아리반에서는 먼저 목적·대상·형식 세 가지만 넣어도 충분히 좋아집니다.</p>
+        <pre>나쁜 예:
+이 자료 보고서로 만들어줘.
+
+좋은 예:
+아래 자료를 팀장에게 공유할 1페이지 보고서 초안으로 정리해줘.
+목적은 의사결정 준비이고, 형식은 핵심 요약 / 근거 / 리스크 / 확인 질문으로 나눠줘.
+원문에 없는 내용은 추정이라고 표시해줘.</pre>
+        <div class="chick"><div class="q">[병아리] 프롬프트를 길게 쓰면 시간이 더 걸리지 않나요?</div><div class="a">처음에는 그렇습니다. 하지만 자주 하는 업무는 템플릿으로 저장해두면 됩니다. 매번 새로 긴 문장을 쓰자는 뜻이 아니라, 반복 업무에 쓸 좋은 심부름 메모를 만들어두자는 뜻입니다.</div></div>
+      </section>
+<section class="lesson"><h3>따라하기: 내 업무 프롬프트 만들기</h3>
+        <p>수강생에게 종이나 메모장을 열게 한 뒤, 자기 업무 하나를 적게 합니다. 예를 들어 “주간보고 작성”, “고객 문의 답변”, “회의록 정리”, “교육 안내문 작성”처럼 매주 반복되는 일이 좋습니다.</p>
+        <ol><li>먼저 업무 이름을 씁니다.</li><li>이 결과물을 볼 사람을 씁니다.</li><li>원하는 결과물 모양을 씁니다.</li><li>절대 하면 안 되는 일을 씁니다.</li><li>확인해야 할 질문을 요청합니다.</li></ol>
+        <figure><div class="shot">화면 예시 자리</div><figcaption>그림 2-1 수강생이 자기 업무를 프롬프트 템플릿으로 바꾸는 활동</figcaption></figure>
+        <div class="dialogue"><div class="teacher"><b>강사</b> “여러분의 업무는 특수해서 AI가 못 할 수도 있습니다. 괜찮습니다. 업무 전체를 맡기지 말고, 읽기·정리·초안 만들기 중 한 단계만 맡겨봅시다.”</div><div class="student"><b>수강생 예상</b> “제 업무는 너무 특수해서 예제가 안 맞는 것 같아요.”</div><div class="answer"><b>강사 답변</b> “그럴수록 업무 전체가 아니라 작은 단계를 골라야 합니다. 예를 들어 판단은 사람이 하고, 자료 정리나 초안 작성만 Copilot에게 맡길 수 있습니다.”</div></div>
+      </section>
+<section class="lesson"><h3>프롬프트 고치기 연습</h3>
+        <p>강사는 일부러 부족한 프롬프트를 보여주고 수강생에게 고치게 해야 합니다. 이것이 가장 효과적인 훈련입니다.</p>
+        <table><tr><th>부족한 프롬프트</th><th>무엇이 빠졌나요?</th><th>고친 예</th></tr><tr><td>메일 답장 써줘</td><td>상대, 톤, 약속 가능 범위</td><td>협력사 담당자에게 정중히 답장하되, 일정 단축을 확정 약속하지 말고 내부 검토 후 회신하겠다고 써줘.</td></tr><tr><td>데이터 분석해줘</td><td>분석 질문, 기준, 검증</td><td>문의 유형 TOP 5, 평균 처리시간이 긴 제품군, 재문의율이 높은 항목을 계산 기준과 함께 정리해줘.</td></tr><tr><td>요약해줘</td><td>목적, 형식, 후속 질문</td><td>회의 준비용으로 핵심 주장, 근거, 리스크, 회의 질문 3개로 나눠 정리해줘.</td></tr></table>
+      </section></article>
+<article class="chapter" id="ch3"><h2>챕터 3. 문서 요약 병아리반 — 긴 자료를 회의 준비로 바꾸기</h2><p class="lead">문서 요약은 Copilot 수업의 첫 성공 경험을 만들기 좋습니다. 하지만 ‘요약해줘’에서 끝나면 얕은 수업이 됩니다. 좋은 요약은 다음 행동으로 이어져야 합니다.</p><section class="lesson"><h3>요약은 끝이 아니라 시작입니다</h3>
+        <p>업무에서 문서를 요약하는 이유는 예쁜 요약문을 얻기 위해서가 아닙니다. 회의에서 말할 핵심을 찾거나, 상사에게 보고할 내용을 고르거나, 내가 추가로 확인해야 할 질문을 만들기 위해서입니다. 그래서 강사는 요약을 “짧게 줄이기”가 아니라 “판단할 수 있게 구조화하기”로 가르쳐야 합니다.</p>
+        <pre>첨부한 문서를 회의 준비용으로 정리해줘.
+형식은 표로 하고, 컬럼은 핵심 주장 / 근거 / 우리 팀 영향 / 리스크 / 회의 질문으로 해줘.
+원문에 없는 내용은 추정이라고 표시해줘.
+마지막에 사람이 반드시 확인해야 할 숫자나 일정이 있으면 따로 적어줘.</pre>
+        <aside class="note"><strong>잠깐만요 │ 파일 첨부가 안 될 때</strong><p>수강생 환경에 따라 파일 첨부 버튼이 없을 수 있습니다. 이때는 문서 일부를 복사해 붙여넣고 ‘아래 발췌문 기준으로’라고 시작하면 됩니다. 강사는 항상 첨부 버전과 붙여넣기 버전 두 가지 실습 경로를 준비해야 합니다.</p></aside>
+      </section>
+<section class="lesson"><h3>따라하기: 3단계 문서 요약</h3>
+        <ol><li>첫 번째 질문: 문서를 5줄로 요약해달라고 요청합니다.</li><li>두 번째 질문: 핵심 주장, 근거, 리스크, 질문으로 나눠달라고 요청합니다.</li><li>세 번째 질문: 원문과 대조해야 할 부분을 표시해달라고 요청합니다.</li></ol>
+        <p>세 번의 결과를 나란히 보면 수강생은 금방 이해합니다. 첫 번째 결과는 빠르지만 얕고, 두 번째 결과는 업무에 가까워지고, 세 번째 결과는 사람이 검토하기 쉬워집니다.</p>
+        <div class="dialogue"><div class="teacher"><b>강사</b> “요약이 깔끔하다고 바로 쓰면 안 됩니다. 깔끔함과 정확성은 다릅니다. 특히 숫자, 일정, 책임자는 원문과 대조해야 합니다.”</div><div class="student"><b>수강생 예상</b> “Copilot 답변이 아주 자연스러운데 그래도 확인해야 하나요?”</div><div class="answer"><b>강사 답변</b> “네. 자연스러운 문장일수록 더 조심해야 합니다. 사람이 놓치기 쉽기 때문입니다. 근거와 확인 질문을 같이 요청하세요.”</div></div>
+      </section></article>
+<article class="chapter" id="ch4"><h2>챕터 4. 메일과 보고서 병아리반 — 예의와 책임을 지키며 초안 만들기</h2><p class="lead">메일은 단순한 글쓰기가 아닙니다. 상대와의 관계, 요청의 강도, 내가 약속할 수 있는 범위, 다음 행동이 모두 들어가는 작은 업무 문서입니다.</p><section class="lesson"><h3>메일 프롬프트에는 ‘약속하면 안 되는 것’을 넣습니다</h3>
+        <p>협력사가 납기를 앞당길 수 있냐고 묻는 상황을 생각해봅시다. Copilot에게 “답장 써줘”라고만 하면 너무 긍정적으로 약속하거나, 반대로 차갑게 거절할 수 있습니다. 업무 메일에서는 내가 확정할 수 없는 내용을 확정처럼 쓰지 않는 것이 중요합니다.</p>
+        <pre>아래 요청 메일에 대한 답장을 작성해줘.
+상대는 협력사 담당자이고, 정중하지만 일정 단축을 확정 약속하면 안 돼.
+포함할 것: 요청 내용 확인, 내부 검토 필요, 검토 후 회신 예정 시점, 추가로 필요한 정보.
+분량은 5문장 이내로 해줘.</pre>
+        <div class="chick"><div class="q">[병아리] AI가 쓴 메일은 티가 나지 않나요?</div><div class="a">티가 날 수 있습니다. 그래서 마지막에 ‘문장을 더 자연스럽게, 우리 회사 사람이 쓰는 말투로, 불필요한 과장 없이’라고 다듬게 하고, 최종 문장은 사람이 꼭 읽어봐야 합니다.</div></div>
+      </section>
+<section class="lesson"><h3>보고서는 구조를 먼저 잡습니다</h3>
+        <p>보고서를 바로 쓰게 하기보다, 먼저 목차와 판단 기준을 만들게 하면 결과가 좋아집니다. 보고서는 보통 상황, 영향, 선택지, 추천안, 요청사항으로 나누면 읽는 사람이 빠르게 판단할 수 있습니다.</p>
+        <pre>아래 이슈 메모를 상사 보고용 1페이지 초안으로 정리해줘.
+형식은 상황 / 영향 / 선택지 / 추천안 / 요청사항으로 나눠줘.
+확정되지 않은 원인은 추정이라고 표시하고, 추가 확인 질문을 마지막에 적어줘.
+톤은 책임 회피처럼 보이지 않게, 간결하게 작성해줘.</pre>
+        <div class="dialogue"><div class="teacher"><b>강사</b> “보고서는 길게 쓰는 것이 목표가 아닙니다. 읽는 사람이 판단할 수 있게 만드는 것이 목표입니다.”</div><div class="student"><b>수강생 예상</b> “Copilot이 너무 긴 보고서를 만들었어요.”</div><div class="answer"><b>강사 답변</b> “좋습니다. 그럴 때는 ‘1페이지’, ‘표 중심’, ‘의사결정에 필요한 내용만’처럼 길이와 목적을 다시 제한하세요.”</div></div>
+      </section></article>
+<article class="chapter" id="ch5"><h2>챕터 5. 데이터 병아리반 — 숫자를 믿기 전에 질문하기</h2><p class="lead">데이터 실습은 재미있지만 위험합니다. Copilot이 숫자를 말하면 그럴듯해 보이기 때문입니다. 데이터 수업의 핵심은 ‘분석해줘’가 아니라 ‘어떤 기준으로 분석했는지 설명해줘’입니다.</p><section class="lesson"><h3>먼저 표를 이해했는지 확인합니다</h3>
+        <p>수강생에게 CSV나 Excel을 주고 바로 인사이트를 달라고 하면 안 됩니다. 먼저 Copilot이 컬럼을 어떻게 이해했는지 확인해야 합니다. 컬럼 뜻을 잘못 이해하면 뒤의 분석도 모두 흔들립니다.</p>
+        <pre>첨부한 CSV의 컬럼 구조를 먼저 설명해줘.
+각 컬럼이 어떤 의미로 보이는지 추정하고, 분석 전에 확인해야 할 점을 알려줘.
+그 다음 문의 유형 TOP 5, 평균 처리 시간이 긴 제품군, 재문의율이 높은 유형을 계산 기준과 함께 정리해줘.</pre>
+        <aside class="note"><strong>잠깐만요 │ 계산 결과는 반드시 샘플로 검산합니다</strong><p>상위 3개, 합계, 평균처럼 간단한 값은 사람이 직접 한두 개 확인해보는 습관을 들여야 합니다. Copilot이 계산 기준을 설명하지 못하면 결과를 그대로 믿으면 안 됩니다.</p></aside>
+      </section>
+<section class="lesson"><h3>강사용 데이터 실습 운영법</h3>
+        <p>좋은 데이터 실습은 작은 데이터로 시작합니다. 처음부터 복잡한 피벗이나 거대한 파일을 다루면 수강생은 Copilot보다 파일 처리에 지칩니다. 20~50행 정도의 샘플 데이터로 문의 유형, 처리 시간, 만족도처럼 이해하기 쉬운 컬럼을 사용하세요.</p>
+        <div class="dialogue"><div class="teacher"><b>강사</b> “데이터 분석에서 첫 질문은 인사이트를 달라는 것이 아닙니다. 먼저 Copilot이 데이터를 어떻게 이해했는지 확인해야 합니다.”</div><div class="student"><b>수강생 예상</b> “결과가 맞는지 모르겠습니다.”</div><div class="answer"><b>강사 답변</b> “좋은 의심입니다. 계산 기준을 설명하게 하고, 간단한 숫자는 직접 확인해봅시다. 데이터 분석에서 의심은 나쁜 태도가 아니라 좋은 태도입니다.”</div></div>
+      </section></article>
+<article class="chapter" id="ch6"><h2>챕터 6. HTML MVP 병아리반 — 아이디어를 화면으로 보여주기</h2><p class="lead">HTML MVP 실습은 코딩 수업이 아닙니다. 말로만 설명하던 아이디어를 한 화면으로 보여주고, 사람들이 같은 그림을 보며 이야기하게 만드는 수업입니다.</p><section class="lesson"><h3>왜 HTML을 만들까</h3>
+        <p>회의에서 “고객 이슈 대시보드가 필요합니다”라고 말하면 사람마다 다른 그림을 떠올립니다. 어떤 사람은 표를, 어떤 사람은 그래프를, 어떤 사람은 보고서를 생각합니다. Copilot에게 단일 HTML 초안을 만들게 하면 모두가 같은 화면을 보며 이야기할 수 있습니다.</p>
+        <pre>단일 HTML 파일로 회의용 대시보드 초안을 만들어줘.
+주제는 고객 VOC 우선순위 정리입니다.
+포함할 것: 상단 요약 카드 3개, 문의 유형 TOP 5 표, 우선 조치가 필요한 항목, 다음 액션 목록.
+디자인은 깔끔하고 업무용으로, 한 파일 안에 CSS까지 포함해줘.
+실제 개인정보는 넣지 말고 샘플 데이터로 작성해줘.</pre>
+        <div class="chick"><div class="q">[병아리] HTML을 모르는 사람도 할 수 있나요?</div><div class="a">네. 이 실습의 목표는 HTML 문법을 외우는 것이 아닙니다. Copilot에게 원하는 화면을 설명하고, 나온 결과를 열어보며 업무에 맞게 수정 요청하는 것입니다.</div></div>
+      </section>
+<section class="lesson"><h3>수업 중 자주 생기는 문제</h3>
+        <p>첫째, 코드가 너무 길어져서 수강생이 겁을 먹을 수 있습니다. 이때 강사는 “코드를 읽는 시간이 아니라 결과 화면을 보고 요구사항을 고치는 시간”이라고 말해야 합니다. 둘째, 브라우저에서 파일을 여는 방법을 모를 수 있습니다. 파일을 .html로 저장하고 더블클릭하면 된다고 천천히 안내하세요. 셋째, 디자인이 마음에 들지 않을 수 있습니다. 이때는 색상, 여백, 카드 수, 표 컬럼처럼 구체적으로 수정 요청하게 합니다.</p>
+        <aside class="tip"><strong>tip</strong><p>HTML MVP는 완성품이 아니라 대화용 초안입니다. 강사는 ‘이걸 배포하자’보다 ‘이 화면을 보고 어떤 의사결정을 할 수 있나요?’라고 물어야 합니다.</p></aside>
+      </section></article>
+<article class="chapter" id="ch7"><h2>챕터 7. 강사 지도서 — 수업 전날부터 마무리까지</h2><p class="lead">좋은 자료가 있어도 강사가 준비하지 않으면 수업은 흔들립니다. 이 장은 강사가 수업 전날, 수업 시작, 실습 중, 마무리에서 무엇을 말하고 확인해야 하는지 정리한 지도서입니다.</p><section class="lesson"><h3>수업 전날 체크리스트</h3>
+        <ul><li>강의 계정으로 Copilot 접속 확인</li><li>파일 첨부 가능 여부 확인</li><li>Outlook, Excel, Word 안 Copilot 버튼 표시 여부 확인</li><li>첨부가 안 될 때 사용할 붙여넣기용 샘플 준비</li><li>개인정보가 없는 샘플 데이터 준비</li><li>화면 공유 시 글자 크기 확인</li><li>인터넷이 느릴 때 설명으로 대체할 예비 흐름 준비</li></ul>
+        <aside class="note"><strong>잠깐만요 │ 강사는 실패 장면도 준비해야 합니다</strong><p>Copilot이 예상과 다른 답을 할 때가 있습니다. 이때 당황해서 새로고침만 반복하면 수강생도 불안해집니다. 오히려 ‘좋습니다. 이런 답이 나올 때 어떻게 고치는지 보겠습니다’라고 말하면 훌륭한 학습 장면이 됩니다.</p></aside>
+      </section>
+<section class="lesson"><h3>마무리 과제</h3>
+        <p>수업 끝에는 “오늘 배운 기능”을 묻지 말고 “내일부터 바꿔볼 업무 하나”를 쓰게 해야 합니다. 예를 들어 주간보고 초안, 회의록 정리, 고객 문의 분류, 교육 안내문 작성처럼 작고 반복되는 일이 좋습니다.</p>
+        <pre>내일부터 Copilot으로 바꿔볼 업무 하나를 정리해줘.
+1. 업무 이름
+2. 지금 걸리는 시간
+3. Copilot에게 맡길 단계
+4. 사람이 반드시 확인할 단계
+5. 첫 프롬프트 초안
+형식은 표로 작성해줘.</pre>
+        <div class="dialogue"><div class="teacher"><b>강사</b> “오늘의 목표는 Copilot 기능을 많이 아는 것이 아니라, 내 업무 하나를 Copilot과 함께 시작할 수 있게 되는 것입니다.”</div><div class="student"><b>수강생 예상</b> “오늘 배운 걸 다 기억 못 할 것 같아요.”</div><div class="answer"><b>강사 답변</b> “괜찮습니다. 전부 기억할 필요 없습니다. 내 업무 하나, 프롬프트 템플릿 하나만 가져가도 성공입니다.”</div></div>
+      </section></article>
+    <article class="chapter" id="projects"><h2>챕터 8. 병아리 실습실 — 바로 써먹는 샘플 프로젝트 8개</h2><p class="lead">이 장은 강사가 수업 중 바로 꺼내 쓸 수 있는 프로젝트 모음입니다. 각 프로젝트는 상황 설명, 첫 질문, 더 나은 질문, 강사용 멘트, 수강생 예상 반응, 마무리 과제로 구성되어 있습니다. 강사는 대상자의 직무에 맞춰 이름과 데이터를 바꾸면 됩니다.</p>
+  <section class="lesson"><h3>프로젝트 1. 회의자료 읽고 임원 브리핑 만들기</h3>
+    <p><strong>상황:</strong> 상사가 30분 뒤 회의에 들어갑니다. 긴 시장 동향 자료를 읽고 핵심과 질문을 준비해야 합니다. 이 상황은 실제 업무에서 자주 만나는 장면입니다. 강사는 먼저 상황을 읽어주고, 수강생에게 “이 업무 전체를 Copilot에게 맡기면 위험한 부분은 무엇인가요?”라고 묻습니다. 그런 다음 Copilot에게 맡길 작은 단계를 고르게 합니다.</p>
+    <figure><div class="shot">화면 예시 자리</div><figcaption>그림 8-1 회의자료 읽고 임원 브리핑 만들기 실습 화면 예시</figcaption></figure>
+    <p><strong>첫 질문:</strong></p>
+    <pre>상사가 30분 뒤 회의에 들어갑니다. 긴 시장 동향 자료를 읽고 핵심과 질문을 준비해야 합니다.
+이 내용을 바탕으로 핵심 주장 / 근거 / 리스크 / 회의 질문 / 사람이 확인할 부분 형식으로 정리해줘.</pre>
+    <p>첫 질문은 일부러 조금 짧게 둡니다. 결과가 너무 일반적이면 그것이 학습 포인트입니다. 강사는 “무엇을 더 알려주면 좋아질까요?”라고 물어봅니다.</p>
+    <p><strong>더 나은 질문:</strong></p>
+    <pre>나는 회의자료 읽고 임원 브리핑 만들기 업무를 준비하는 실무자입니다.
+상황은 다음과 같습니다: 상사가 30분 뒤 회의에 들어갑니다. 긴 시장 동향 자료를 읽고 핵심과 질문을 준비해야 합니다.
+원하는 결과물은 핵심 주장 / 근거 / 리스크 / 회의 질문 / 사람이 확인할 부분입니다.
+결과는 업무에서 바로 검토할 수 있게 표와 짧은 문단으로 섞어 작성해줘.
+원문에 없는 내용은 추정이라고 표시하고, 사람이 확인해야 할 질문을 마지막에 따로 써줘.
+민감정보나 실제 고객명은 만들지 말고 가명 또는 샘플로 처리해줘.</pre>
+    <div class="dialogue"><div class="teacher"><b>강사</b> “첫 질문과 두 번째 질문의 차이를 비교해봅시다. Copilot이 더 똑똑해진 것이 아니라, 우리가 업무를 더 친절하게 설명한 것입니다.”</div><div class="student"><b>수강생 예상</b> “두 번째 질문은 너무 길어 보입니다.”</div><div class="answer"><b>강사 답변</b> “맞습니다. 그래서 반복 업무는 템플릿으로 저장해두면 됩니다. 오늘은 한 번 제대로 된 템플릿을 만드는 연습을 하는 겁니다.”</div></div>
+    <p><strong>강사 관찰 포인트:</strong> 결과물에 목적, 대상, 형식, 확인 질문이 들어갔는지 봅니다. 예쁜 문장보다 중요한 것은 사람이 검토하고 다음 행동을 정할 수 있느냐입니다.</p>
+    <p><strong>마무리 과제:</strong> 수강생에게 이 프로젝트를 자신의 업무로 바꾸게 합니다. 부서명, 독자, 결과물 형식, 주의사항을 바꾸면 바로 개인 프롬프트 템플릿이 됩니다.</p>
+  </section><section class="lesson"><h3>프로젝트 2. 협력사 일정 문의 답장 만들기</h3>
+    <p><strong>상황:</strong> 협력사가 납기 단축 가능 여부를 물었습니다. 내부 검토 전이라 확정 약속은 하면 안 됩니다. 이 상황은 실제 업무에서 자주 만나는 장면입니다. 강사는 먼저 상황을 읽어주고, 수강생에게 “이 업무 전체를 Copilot에게 맡기면 위험한 부분은 무엇인가요?”라고 묻습니다. 그런 다음 Copilot에게 맡길 작은 단계를 고르게 합니다.</p>
+    <figure><div class="shot">화면 예시 자리</div><figcaption>그림 8-2 협력사 일정 문의 답장 만들기 실습 화면 예시</figcaption></figure>
+    <p><strong>첫 질문:</strong></p>
+    <pre>협력사가 납기 단축 가능 여부를 물었습니다. 내부 검토 전이라 확정 약속은 하면 안 됩니다.
+이 내용을 바탕으로 정중한 답장 / 내부 검토 안내 / 추가 요청 정보 / 회신 예정 시점 형식으로 정리해줘.</pre>
+    <p>첫 질문은 일부러 조금 짧게 둡니다. 결과가 너무 일반적이면 그것이 학습 포인트입니다. 강사는 “무엇을 더 알려주면 좋아질까요?”라고 물어봅니다.</p>
+    <p><strong>더 나은 질문:</strong></p>
+    <pre>나는 협력사 일정 문의 답장 만들기 업무를 준비하는 실무자입니다.
+상황은 다음과 같습니다: 협력사가 납기 단축 가능 여부를 물었습니다. 내부 검토 전이라 확정 약속은 하면 안 됩니다.
+원하는 결과물은 정중한 답장 / 내부 검토 안내 / 추가 요청 정보 / 회신 예정 시점입니다.
+결과는 업무에서 바로 검토할 수 있게 표와 짧은 문단으로 섞어 작성해줘.
+원문에 없는 내용은 추정이라고 표시하고, 사람이 확인해야 할 질문을 마지막에 따로 써줘.
+민감정보나 실제 고객명은 만들지 말고 가명 또는 샘플로 처리해줘.</pre>
+    <div class="dialogue"><div class="teacher"><b>강사</b> “첫 질문과 두 번째 질문의 차이를 비교해봅시다. Copilot이 더 똑똑해진 것이 아니라, 우리가 업무를 더 친절하게 설명한 것입니다.”</div><div class="student"><b>수강생 예상</b> “두 번째 질문은 너무 길어 보입니다.”</div><div class="answer"><b>강사 답변</b> “맞습니다. 그래서 반복 업무는 템플릿으로 저장해두면 됩니다. 오늘은 한 번 제대로 된 템플릿을 만드는 연습을 하는 겁니다.”</div></div>
+    <p><strong>강사 관찰 포인트:</strong> 결과물에 목적, 대상, 형식, 확인 질문이 들어갔는지 봅니다. 예쁜 문장보다 중요한 것은 사람이 검토하고 다음 행동을 정할 수 있느냐입니다.</p>
+    <p><strong>마무리 과제:</strong> 수강생에게 이 프로젝트를 자신의 업무로 바꾸게 합니다. 부서명, 독자, 결과물 형식, 주의사항을 바꾸면 바로 개인 프롬프트 템플릿이 됩니다.</p>
+  </section><section class="lesson"><h3>프로젝트 3. VOC 데이터 우선순위 정하기</h3>
+    <p><strong>상황:</strong> 고객 문의 목록을 보고 어떤 유형을 먼저 개선해야 할지 정해야 합니다. 이 상황은 실제 업무에서 자주 만나는 장면입니다. 강사는 먼저 상황을 읽어주고, 수강생에게 “이 업무 전체를 Copilot에게 맡기면 위험한 부분은 무엇인가요?”라고 묻습니다. 그런 다음 Copilot에게 맡길 작은 단계를 고르게 합니다.</p>
+    <figure><div class="shot">화면 예시 자리</div><figcaption>그림 8-3 VOC 데이터 우선순위 정하기 실습 화면 예시</figcaption></figure>
+    <p><strong>첫 질문:</strong></p>
+    <pre>고객 문의 목록을 보고 어떤 유형을 먼저 개선해야 할지 정해야 합니다.
+이 내용을 바탕으로 문의 유형 TOP 5 / 처리시간 / 재문의율 / 우선 조치 항목 형식으로 정리해줘.</pre>
+    <p>첫 질문은 일부러 조금 짧게 둡니다. 결과가 너무 일반적이면 그것이 학습 포인트입니다. 강사는 “무엇을 더 알려주면 좋아질까요?”라고 물어봅니다.</p>
+    <p><strong>더 나은 질문:</strong></p>
+    <pre>나는 VOC 데이터 우선순위 정하기 업무를 준비하는 실무자입니다.
+상황은 다음과 같습니다: 고객 문의 목록을 보고 어떤 유형을 먼저 개선해야 할지 정해야 합니다.
+원하는 결과물은 문의 유형 TOP 5 / 처리시간 / 재문의율 / 우선 조치 항목입니다.
+결과는 업무에서 바로 검토할 수 있게 표와 짧은 문단으로 섞어 작성해줘.
+원문에 없는 내용은 추정이라고 표시하고, 사람이 확인해야 할 질문을 마지막에 따로 써줘.
+민감정보나 실제 고객명은 만들지 말고 가명 또는 샘플로 처리해줘.</pre>
+    <div class="dialogue"><div class="teacher"><b>강사</b> “첫 질문과 두 번째 질문의 차이를 비교해봅시다. Copilot이 더 똑똑해진 것이 아니라, 우리가 업무를 더 친절하게 설명한 것입니다.”</div><div class="student"><b>수강생 예상</b> “두 번째 질문은 너무 길어 보입니다.”</div><div class="answer"><b>강사 답변</b> “맞습니다. 그래서 반복 업무는 템플릿으로 저장해두면 됩니다. 오늘은 한 번 제대로 된 템플릿을 만드는 연습을 하는 겁니다.”</div></div>
+    <p><strong>강사 관찰 포인트:</strong> 결과물에 목적, 대상, 형식, 확인 질문이 들어갔는지 봅니다. 예쁜 문장보다 중요한 것은 사람이 검토하고 다음 행동을 정할 수 있느냐입니다.</p>
+    <p><strong>마무리 과제:</strong> 수강생에게 이 프로젝트를 자신의 업무로 바꾸게 합니다. 부서명, 독자, 결과물 형식, 주의사항을 바꾸면 바로 개인 프롬프트 템플릿이 됩니다.</p>
+  </section><section class="lesson"><h3>프로젝트 4. 교육 안내 HTML 페이지 만들기</h3>
+    <p><strong>상황:</strong> 사내 교육을 안내하는 페이지가 필요합니다. 신청 대상, 일정, 준비물, FAQ가 보여야 합니다. 이 상황은 실제 업무에서 자주 만나는 장면입니다. 강사는 먼저 상황을 읽어주고, 수강생에게 “이 업무 전체를 Copilot에게 맡기면 위험한 부분은 무엇인가요?”라고 묻습니다. 그런 다음 Copilot에게 맡길 작은 단계를 고르게 합니다.</p>
+    <figure><div class="shot">화면 예시 자리</div><figcaption>그림 8-4 교육 안내 HTML 페이지 만들기 실습 화면 예시</figcaption></figure>
+    <p><strong>첫 질문:</strong></p>
+    <pre>사내 교육을 안내하는 페이지가 필요합니다. 신청 대상, 일정, 준비물, FAQ가 보여야 합니다.
+이 내용을 바탕으로 단일 HTML / 상단 안내 / 일정표 / FAQ / 신청 안내 형식으로 정리해줘.</pre>
+    <p>첫 질문은 일부러 조금 짧게 둡니다. 결과가 너무 일반적이면 그것이 학습 포인트입니다. 강사는 “무엇을 더 알려주면 좋아질까요?”라고 물어봅니다.</p>
+    <p><strong>더 나은 질문:</strong></p>
+    <pre>나는 교육 안내 HTML 페이지 만들기 업무를 준비하는 실무자입니다.
+상황은 다음과 같습니다: 사내 교육을 안내하는 페이지가 필요합니다. 신청 대상, 일정, 준비물, FAQ가 보여야 합니다.
+원하는 결과물은 단일 HTML / 상단 안내 / 일정표 / FAQ / 신청 안내입니다.
+결과는 업무에서 바로 검토할 수 있게 표와 짧은 문단으로 섞어 작성해줘.
+원문에 없는 내용은 추정이라고 표시하고, 사람이 확인해야 할 질문을 마지막에 따로 써줘.
+민감정보나 실제 고객명은 만들지 말고 가명 또는 샘플로 처리해줘.</pre>
+    <div class="dialogue"><div class="teacher"><b>강사</b> “첫 질문과 두 번째 질문의 차이를 비교해봅시다. Copilot이 더 똑똑해진 것이 아니라, 우리가 업무를 더 친절하게 설명한 것입니다.”</div><div class="student"><b>수강생 예상</b> “두 번째 질문은 너무 길어 보입니다.”</div><div class="answer"><b>강사 답변</b> “맞습니다. 그래서 반복 업무는 템플릿으로 저장해두면 됩니다. 오늘은 한 번 제대로 된 템플릿을 만드는 연습을 하는 겁니다.”</div></div>
+    <p><strong>강사 관찰 포인트:</strong> 결과물에 목적, 대상, 형식, 확인 질문이 들어갔는지 봅니다. 예쁜 문장보다 중요한 것은 사람이 검토하고 다음 행동을 정할 수 있느냐입니다.</p>
+    <p><strong>마무리 과제:</strong> 수강생에게 이 프로젝트를 자신의 업무로 바꾸게 합니다. 부서명, 독자, 결과물 형식, 주의사항을 바꾸면 바로 개인 프롬프트 템플릿이 됩니다.</p>
+  </section><section class="lesson"><h3>프로젝트 5. 주간보고 초안 만들기</h3>
+    <p><strong>상황:</strong> 팀원들의 업무 메모가 흩어져 있습니다. 금요일 오후 팀장에게 보낼 주간보고가 필요합니다. 이 상황은 실제 업무에서 자주 만나는 장면입니다. 강사는 먼저 상황을 읽어주고, 수강생에게 “이 업무 전체를 Copilot에게 맡기면 위험한 부분은 무엇인가요?”라고 묻습니다. 그런 다음 Copilot에게 맡길 작은 단계를 고르게 합니다.</p>
+    <figure><div class="shot">화면 예시 자리</div><figcaption>그림 8-5 주간보고 초안 만들기 실습 화면 예시</figcaption></figure>
+    <p><strong>첫 질문:</strong></p>
+    <pre>팀원들의 업무 메모가 흩어져 있습니다. 금요일 오후 팀장에게 보낼 주간보고가 필요합니다.
+이 내용을 바탕으로 진행상황 / 이슈 / 리스크 / 다음 주 계획 / 요청사항 형식으로 정리해줘.</pre>
+    <p>첫 질문은 일부러 조금 짧게 둡니다. 결과가 너무 일반적이면 그것이 학습 포인트입니다. 강사는 “무엇을 더 알려주면 좋아질까요?”라고 물어봅니다.</p>
+    <p><strong>더 나은 질문:</strong></p>
+    <pre>나는 주간보고 초안 만들기 업무를 준비하는 실무자입니다.
+상황은 다음과 같습니다: 팀원들의 업무 메모가 흩어져 있습니다. 금요일 오후 팀장에게 보낼 주간보고가 필요합니다.
+원하는 결과물은 진행상황 / 이슈 / 리스크 / 다음 주 계획 / 요청사항입니다.
+결과는 업무에서 바로 검토할 수 있게 표와 짧은 문단으로 섞어 작성해줘.
+원문에 없는 내용은 추정이라고 표시하고, 사람이 확인해야 할 질문을 마지막에 따로 써줘.
+민감정보나 실제 고객명은 만들지 말고 가명 또는 샘플로 처리해줘.</pre>
+    <div class="dialogue"><div class="teacher"><b>강사</b> “첫 질문과 두 번째 질문의 차이를 비교해봅시다. Copilot이 더 똑똑해진 것이 아니라, 우리가 업무를 더 친절하게 설명한 것입니다.”</div><div class="student"><b>수강생 예상</b> “두 번째 질문은 너무 길어 보입니다.”</div><div class="answer"><b>강사 답변</b> “맞습니다. 그래서 반복 업무는 템플릿으로 저장해두면 됩니다. 오늘은 한 번 제대로 된 템플릿을 만드는 연습을 하는 겁니다.”</div></div>
+    <p><strong>강사 관찰 포인트:</strong> 결과물에 목적, 대상, 형식, 확인 질문이 들어갔는지 봅니다. 예쁜 문장보다 중요한 것은 사람이 검토하고 다음 행동을 정할 수 있느냐입니다.</p>
+    <p><strong>마무리 과제:</strong> 수강생에게 이 프로젝트를 자신의 업무로 바꾸게 합니다. 부서명, 독자, 결과물 형식, 주의사항을 바꾸면 바로 개인 프롬프트 템플릿이 됩니다.</p>
+  </section><section class="lesson"><h3>프로젝트 6. 회의록에서 액션 아이템 뽑기</h3>
+    <p><strong>상황:</strong> 회의 메모에는 결정사항과 잡담이 섞여 있습니다. 담당자와 기한이 있는 실행 항목만 정리해야 합니다. 이 상황은 실제 업무에서 자주 만나는 장면입니다. 강사는 먼저 상황을 읽어주고, 수강생에게 “이 업무 전체를 Copilot에게 맡기면 위험한 부분은 무엇인가요?”라고 묻습니다. 그런 다음 Copilot에게 맡길 작은 단계를 고르게 합니다.</p>
+    <figure><div class="shot">화면 예시 자리</div><figcaption>그림 8-6 회의록에서 액션 아이템 뽑기 실습 화면 예시</figcaption></figure>
+    <p><strong>첫 질문:</strong></p>
+    <pre>회의 메모에는 결정사항과 잡담이 섞여 있습니다. 담당자와 기한이 있는 실행 항목만 정리해야 합니다.
+이 내용을 바탕으로 결정사항 / 액션 아이템 / 담당자 / 기한 / 보류 질문 형식으로 정리해줘.</pre>
+    <p>첫 질문은 일부러 조금 짧게 둡니다. 결과가 너무 일반적이면 그것이 학습 포인트입니다. 강사는 “무엇을 더 알려주면 좋아질까요?”라고 물어봅니다.</p>
+    <p><strong>더 나은 질문:</strong></p>
+    <pre>나는 회의록에서 액션 아이템 뽑기 업무를 준비하는 실무자입니다.
+상황은 다음과 같습니다: 회의 메모에는 결정사항과 잡담이 섞여 있습니다. 담당자와 기한이 있는 실행 항목만 정리해야 합니다.
+원하는 결과물은 결정사항 / 액션 아이템 / 담당자 / 기한 / 보류 질문입니다.
+결과는 업무에서 바로 검토할 수 있게 표와 짧은 문단으로 섞어 작성해줘.
+원문에 없는 내용은 추정이라고 표시하고, 사람이 확인해야 할 질문을 마지막에 따로 써줘.
+민감정보나 실제 고객명은 만들지 말고 가명 또는 샘플로 처리해줘.</pre>
+    <div class="dialogue"><div class="teacher"><b>강사</b> “첫 질문과 두 번째 질문의 차이를 비교해봅시다. Copilot이 더 똑똑해진 것이 아니라, 우리가 업무를 더 친절하게 설명한 것입니다.”</div><div class="student"><b>수강생 예상</b> “두 번째 질문은 너무 길어 보입니다.”</div><div class="answer"><b>강사 답변</b> “맞습니다. 그래서 반복 업무는 템플릿으로 저장해두면 됩니다. 오늘은 한 번 제대로 된 템플릿을 만드는 연습을 하는 겁니다.”</div></div>
+    <p><strong>강사 관찰 포인트:</strong> 결과물에 목적, 대상, 형식, 확인 질문이 들어갔는지 봅니다. 예쁜 문장보다 중요한 것은 사람이 검토하고 다음 행동을 정할 수 있느냐입니다.</p>
+    <p><strong>마무리 과제:</strong> 수강생에게 이 프로젝트를 자신의 업무로 바꾸게 합니다. 부서명, 독자, 결과물 형식, 주의사항을 바꾸면 바로 개인 프롬프트 템플릿이 됩니다.</p>
+  </section><section class="lesson"><h3>프로젝트 7. 신입 온보딩 FAQ 만들기</h3>
+    <p><strong>상황:</strong> 신입사원이 첫 주에 자주 묻는 질문을 정리해야 합니다. 이 상황은 실제 업무에서 자주 만나는 장면입니다. 강사는 먼저 상황을 읽어주고, 수강생에게 “이 업무 전체를 Copilot에게 맡기면 위험한 부분은 무엇인가요?”라고 묻습니다. 그런 다음 Copilot에게 맡길 작은 단계를 고르게 합니다.</p>
+    <figure><div class="shot">화면 예시 자리</div><figcaption>그림 8-7 신입 온보딩 FAQ 만들기 실습 화면 예시</figcaption></figure>
+    <p><strong>첫 질문:</strong></p>
+    <pre>신입사원이 첫 주에 자주 묻는 질문을 정리해야 합니다.
+이 내용을 바탕으로 첫날 준비물 / 계정 신청 / 교육 일정 / 자주 묻는 질문 형식으로 정리해줘.</pre>
+    <p>첫 질문은 일부러 조금 짧게 둡니다. 결과가 너무 일반적이면 그것이 학습 포인트입니다. 강사는 “무엇을 더 알려주면 좋아질까요?”라고 물어봅니다.</p>
+    <p><strong>더 나은 질문:</strong></p>
+    <pre>나는 신입 온보딩 FAQ 만들기 업무를 준비하는 실무자입니다.
+상황은 다음과 같습니다: 신입사원이 첫 주에 자주 묻는 질문을 정리해야 합니다.
+원하는 결과물은 첫날 준비물 / 계정 신청 / 교육 일정 / 자주 묻는 질문입니다.
+결과는 업무에서 바로 검토할 수 있게 표와 짧은 문단으로 섞어 작성해줘.
+원문에 없는 내용은 추정이라고 표시하고, 사람이 확인해야 할 질문을 마지막에 따로 써줘.
+민감정보나 실제 고객명은 만들지 말고 가명 또는 샘플로 처리해줘.</pre>
+    <div class="dialogue"><div class="teacher"><b>강사</b> “첫 질문과 두 번째 질문의 차이를 비교해봅시다. Copilot이 더 똑똑해진 것이 아니라, 우리가 업무를 더 친절하게 설명한 것입니다.”</div><div class="student"><b>수강생 예상</b> “두 번째 질문은 너무 길어 보입니다.”</div><div class="answer"><b>강사 답변</b> “맞습니다. 그래서 반복 업무는 템플릿으로 저장해두면 됩니다. 오늘은 한 번 제대로 된 템플릿을 만드는 연습을 하는 겁니다.”</div></div>
+    <p><strong>강사 관찰 포인트:</strong> 결과물에 목적, 대상, 형식, 확인 질문이 들어갔는지 봅니다. 예쁜 문장보다 중요한 것은 사람이 검토하고 다음 행동을 정할 수 있느냐입니다.</p>
+    <p><strong>마무리 과제:</strong> 수강생에게 이 프로젝트를 자신의 업무로 바꾸게 합니다. 부서명, 독자, 결과물 형식, 주의사항을 바꾸면 바로 개인 프롬프트 템플릿이 됩니다.</p>
+  </section><section class="lesson"><h3>프로젝트 8. 아이디어 심사표 만들기</h3>
+    <p><strong>상황:</strong> 여러 개선 아이디어 중 어떤 것을 먼저 실험할지 골라야 합니다. 이 상황은 실제 업무에서 자주 만나는 장면입니다. 강사는 먼저 상황을 읽어주고, 수강생에게 “이 업무 전체를 Copilot에게 맡기면 위험한 부분은 무엇인가요?”라고 묻습니다. 그런 다음 Copilot에게 맡길 작은 단계를 고르게 합니다.</p>
+    <figure><div class="shot">화면 예시 자리</div><figcaption>그림 8-8 아이디어 심사표 만들기 실습 화면 예시</figcaption></figure>
+    <p><strong>첫 질문:</strong></p>
+    <pre>여러 개선 아이디어 중 어떤 것을 먼저 실험할지 골라야 합니다.
+이 내용을 바탕으로 평가 기준 / 점수표 / 추천안 / 추가 확인 데이터 형식으로 정리해줘.</pre>
+    <p>첫 질문은 일부러 조금 짧게 둡니다. 결과가 너무 일반적이면 그것이 학습 포인트입니다. 강사는 “무엇을 더 알려주면 좋아질까요?”라고 물어봅니다.</p>
+    <p><strong>더 나은 질문:</strong></p>
+    <pre>나는 아이디어 심사표 만들기 업무를 준비하는 실무자입니다.
+상황은 다음과 같습니다: 여러 개선 아이디어 중 어떤 것을 먼저 실험할지 골라야 합니다.
+원하는 결과물은 평가 기준 / 점수표 / 추천안 / 추가 확인 데이터입니다.
+결과는 업무에서 바로 검토할 수 있게 표와 짧은 문단으로 섞어 작성해줘.
+원문에 없는 내용은 추정이라고 표시하고, 사람이 확인해야 할 질문을 마지막에 따로 써줘.
+민감정보나 실제 고객명은 만들지 말고 가명 또는 샘플로 처리해줘.</pre>
+    <div class="dialogue"><div class="teacher"><b>강사</b> “첫 질문과 두 번째 질문의 차이를 비교해봅시다. Copilot이 더 똑똑해진 것이 아니라, 우리가 업무를 더 친절하게 설명한 것입니다.”</div><div class="student"><b>수강생 예상</b> “두 번째 질문은 너무 길어 보입니다.”</div><div class="answer"><b>강사 답변</b> “맞습니다. 그래서 반복 업무는 템플릿으로 저장해두면 됩니다. 오늘은 한 번 제대로 된 템플릿을 만드는 연습을 하는 겁니다.”</div></div>
+    <p><strong>강사 관찰 포인트:</strong> 결과물에 목적, 대상, 형식, 확인 질문이 들어갔는지 봅니다. 예쁜 문장보다 중요한 것은 사람이 검토하고 다음 행동을 정할 수 있느냐입니다.</p>
+    <p><strong>마무리 과제:</strong> 수강생에게 이 프로젝트를 자신의 업무로 바꾸게 합니다. 부서명, 독자, 결과물 형식, 주의사항을 바꾸면 바로 개인 프롬프트 템플릿이 됩니다.</p>
+  </section></article>
+    <article class="chapter" id="qna"><h2>챕터 9. 병아리 질문함 — 강사가 자주 받는 질문 10개</h2><p class="lead">초보 수강생은 질문을 많이 합니다. 질문이 많다는 것은 수업이 흔들린다는 뜻이 아니라, 수강생이 자기 업무에 연결해보고 있다는 뜻입니다. 강사는 질문을 막지 말고 좋은 학습 장면으로 바꿔야 합니다.</p>
+  <div class="chick"><div class="q">[병아리 질문 1] Copilot 답변이 너무 길어요.</div><div class="a">길이와 형식을 제한하세요. 예를 들어 ‘5문장 이내’, ‘표로’, ‘팀장 보고용 1페이지’처럼 말하면 됩니다.</div></div><div class="chick"><div class="q">[병아리 질문 2] 답변이 너무 일반적이에요.</div><div class="a">업무 배경, 대상 독자, 금지할 내용, 판단 기준이 빠졌을 가능성이 큽니다. Copilot 탓만 하지 말고 내가 준 지시를 같이 봅니다.</div></div><div class="chick"><div class="q">[병아리 질문 3] 개인정보를 넣어도 되나요?</div><div class="a">수업에서는 절대 실제 개인정보를 쓰지 않습니다. 현업에서도 조직 정책을 확인하고, 가능하면 가명 처리된 샘플로 먼저 연습해야 합니다.</div></div><div class="chick"><div class="q">[병아리 질문 4] 제 화면에는 버튼이 없어요.</div><div class="a">앱 안 Copilot이 안 보이면 Copilot Chat으로 대체합니다. 메일 본문이나 문서 발췌문을 붙여넣고 같은 원리를 연습할 수 있습니다.</div></div><div class="chick"><div class="q">[병아리 질문 5] Copilot이 틀리면 수업이 망하지 않나요?</div><div class="a">오히려 좋은 장면입니다. 틀린 답을 어떻게 고치는지 보여주는 것이 실제 업무에 더 가깝습니다.</div></div><div class="chick"><div class="q">[병아리 질문 6] 프롬프트를 외워야 하나요?</div><div class="a">외우지 말고 구조를 익히면 됩니다. 목적, 대상, 형식, 제약, 검토 기준을 떠올리면 됩니다.</div></div><div class="chick"><div class="q">[병아리 질문 7] HTML 코드를 몰라도 MVP 실습이 가능한가요?</div><div class="a">가능합니다. 이 실습은 코딩 시험이 아니라 화면 초안을 만들어 대화하는 훈련입니다.</div></div><div class="chick"><div class="q">[병아리 질문 8] 다른 AI 도구도 소개해야 하나요?</div><div class="a">이번 과정은 Copilot-only 환경이므로 외부 도구는 참고자료로만 소개하고, 실습은 Copilot 안에서 끝내는 편이 좋습니다.</div></div><div class="chick"><div class="q">[병아리 질문 9] 수강생이 계속 부정적으로 말하면요?</div><div class="a">반박하기보다 작은 업무 하나로 좁힙니다. ‘업무 전체가 아니라 초안이나 정리 한 단계만 맡겨보자’고 안내합니다.</div></div><div class="chick"><div class="q">[병아리 질문 10] 결과가 옆 사람과 다르면요?</div><div class="a">정상입니다. 생성형 AI는 표현이 달라질 수 있습니다. 결과가 업무 기준을 만족하는지 비교하면 됩니다.</div></div>
+  <aside class="tip"><strong>tip</strong><p>질문을 받으면 바로 정답을 말하기보다, ‘좋은 질문입니다. 이 질문은 실제 업무에서 매우 중요합니다’라고 먼저 인정하세요. 그 한 문장만으로도 수강생은 안심하고 따라옵니다.</p></aside>
+  </article>
+  </div>
+</body>
+</html>
